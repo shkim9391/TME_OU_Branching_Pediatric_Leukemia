@@ -18,6 +18,12 @@ python scripts/plot_mu_theta_scatter_with_centroids.py
 python scripts/fig2_full.py
 python scripts/fig3_full.py
 python scripts/fig4_full.py
+
+# Figure 5
 python scripts/fit_fig5_models.py
 python scripts/fig5_ablations_baselines.py
-python scripts/make_fig6_fig7_layout_row1row2row3.py
+
+# Figure 6
+python scripts/make_fig6_panels.py
+python scripts/make_fig6_composite.py
+# or: python scripts/make_fig6_fig7_layout_row1row2row3.py
