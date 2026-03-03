@@ -45,7 +45,7 @@ python scripts/fig4_full.py
 python scripts/fit_fig5_models.py
 python scripts/fig5_ablations_baselines.py
 
-# Figure 6
+# Figure 6 and 7
 python scripts/make_fig6_panels.py
 python scripts/make_fig6_composite.py
 python scripts/make_fig6_fig7_layout_row1row2row3.py
