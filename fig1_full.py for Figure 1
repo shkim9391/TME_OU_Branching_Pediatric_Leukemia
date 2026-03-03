@@ -1,0 +1,173 @@
+"""
+#fig1_full.py for Figure 1
+
+#!/usr/bin/env python3
+import os
+from PIL import Image
+
+# -------------------------------------------------------------------
+# Paths (EDIT ONLY THIS)
+# -------------------------------------------------------------------
+base_dir = "/Users/seung-hwan.kim/Desktop/TME_OU_Branching/Figure_1"
+
+path_A = os.path.join(base_dir, "Fig1A.tiff")
+path_B = os.path.join(base_dir, "Fig1B.tiff")
+path_C = os.path.join(base_dir, "Fig1C.tiff")
+path_D = os.path.join(base_dir, "Fig1D_regenerated.tiff")
+
+# -------------------------------------------------------------------
+# Tuning knobs (increase CROP_PX if faint edges persist)
+# -------------------------------------------------------------------
+CROP_PX = 3          # try 3; if borders remain, use 4–6
+WHITEN_MARGIN = 4    # pixels along edges to force to white
+WHITEN_THRESH = 245  # whiten edge pixels darker than this (anti-aliased outlines)
+GAP = 60             # gap between panels (px)
+BG = (255, 255, 255) # white background
+
+def to_rgb_on_white(im: Image.Image) -> Image.Image:
+    """Flatten transparency onto white and return RGB (prevents alpha-edge seams)."""
+    if im.mode in ("RGBA", "LA") or (im.mode == "P" and "transparency" in im.info):
+        rgba = im.convert("RGBA")
+        canvas = Image.new("RGBA", rgba.size, BG + (255,))
+        canvas.alpha_composite(rgba)
+        return canvas.convert("RGB")
+    return im.convert("RGB")
+
+def crop_border(im: Image.Image, px: int) -> Image.Image:
+    if px <= 0:
+        return im
+    w, h = im.size
+    return im.crop((px, px, w - px, h - px))
+
+def whiten_edge_margin(im: Image.Image, margin: int, thresh: int) -> Image.Image:
+    """Force any near-edge non-white pixels to pure white (kills faint outlines)."""
+    im = im.copy()
+    w, h = im.size
+    pix = im.load()
+
+    def whiten_if_needed(x, y):
+        r, g, b = pix[x, y]
+        if (r < thresh) or (g < thresh) or (b < thresh):
+            pix[x, y] = BG
+
+    # top/bottom
+    for y in range(0, min(margin, h)):
+        for x in range(w):
+            whiten_if_needed(x, y)
+    for y in range(max(0, h - margin), h):
+        for x in range(w):
+            whiten_if_needed(x, y)
+
+    # left/right
+    for x in range(0, min(margin, w)):
+        for y in range(h):
+            whiten_if_needed(x, y)
+    for x in range(max(0, w - margin), w):
+        for y in range(h):
+            whiten_if_needed(x, y)
+
+    return im
+
+A_SCALE = 0.85   # 0.80–0.95; smaller = more shrink
+A_CENTER = True  # center A in its slot (nice look)
+
+def trim_left_whitespace(im: Image.Image, tol: int = 245, pad_left: int = 8) -> Image.Image:
+    """
+    Crop only the LEFT side based on non-white pixels.
+    tol: how white is "background" (higher = more aggressive trimming)
+    pad_left: keep a few pixels of margin after trimming
+    """
+    gray = im.convert("L")
+    # mask: 255 where pixels are "not white"
+    mask = gray.point(lambda x: 255 if x < tol else 0)
+    bbox = mask.getbbox()
+    if not bbox:
+        return im
+    left = max(bbox[0] - pad_left, 0)
+    # crop left only; keep full height/width on other sides
+    return im.crop((left, 0, im.size[0], im.size[1]))
+
+def resize_to_width(im, target_w):
+    w, h = im.size
+    if w == target_w:
+        return im
+    scale = target_w / w
+    new_h = int(round(h * scale))
+    try:
+        resample = Image.Resampling.LANCZOS
+    except AttributeError:
+        resample = Image.LANCZOS
+    return im.resize((target_w, new_h), resample=resample)
+
+def pad_to_size(im, target_w, target_h, bg=BG):
+    """Pad image to exact (target_w, target_h), anchored top-left."""
+    canvas = Image.new("RGB", (target_w, target_h), bg)
+    canvas.paste(im, (0, 0))
+    return canvas
+
+def pad_center(im, target_w, target_h, bg=BG):
+    """Pad image to exact (target_w, target_h), centered."""
+    canvas = Image.new("RGB", (target_w, target_h), bg)
+    x = (target_w - im.size[0]) // 2
+    y = (target_h - im.size[1]) // 2
+    canvas.paste(im, (max(x, 0), max(y, 0)))
+    return canvas
+
+# -------------------------------------------------------------------
+# Load + clean each panel
+# -------------------------------------------------------------------
+A = whiten_edge_margin(crop_border(to_rgb_on_white(Image.open(path_A)), CROP_PX), WHITEN_MARGIN, WHITEN_THRESH)
+B = whiten_edge_margin(crop_border(to_rgb_on_white(Image.open(path_B)), CROP_PX), WHITEN_MARGIN, WHITEN_THRESH)
+C = whiten_edge_margin(crop_border(to_rgb_on_white(Image.open(path_C)), CROP_PX), WHITEN_MARGIN, WHITEN_THRESH)
+D = whiten_edge_margin(crop_border(to_rgb_on_white(Image.open(path_D)), CROP_PX), WHITEN_MARGIN, WHITEN_THRESH)
+
+LEFT_CROP_PX = 150
+#A = A.crop((LEFT_CROP_PX, 0, A.size[0], A.size[1]))
+# -------------------------------------------------------------------
+# Assemble a 2x2 grid: A B / C D
+# (Keeps columns aligned, avoids seams)
+# -------------------------------------------------------------------
+# 1) Choose column width WITHOUT A (so A won’t force the whole column big)
+col_w = max(B.size[0], C.size[0], D.size[0])
+
+# 2) Resize B,C,D to full column width
+B = resize_to_width(B, col_w)
+C = resize_to_width(C, col_w)
+D = resize_to_width(D, col_w)
+
+# 3) Trim A correctly BEFORE resizing
+A = trim_left_whitespace(A, tol=245, pad_left=8)   # tol ~235–250 works well
+A = resize_to_width(A, int(col_w * A_SCALE))
+
+# 4) Row heights (based on resized panels)
+row1_h = max(A.size[1], B.size[1])
+row2_h = max(C.size[1], D.size[1])
+
+# 5) Left-anchor A in its slot (NOT centered)
+A = pad_to_size(A, col_w, row1_h)   # <-- this is the key
+
+B = pad_to_size(B, col_w, row1_h)
+C = pad_to_size(C, col_w, row2_h)
+D = pad_to_size(D, col_w, row2_h)
+
+W = col_w * 2 + GAP
+H = row1_h + row2_h + GAP
+
+figure = Image.new("RGB", (W, H), BG)
+figure.paste(A, (0, 0))
+figure.paste(B, (col_w + GAP, 0))
+figure.paste(C, (0, row1_h + GAP))
+figure.paste(D, (col_w + GAP, row1_h + GAP))
+
+# -------------------------------------------------------------------
+# Save outputs
+# -------------------------------------------------------------------
+out_png  = os.path.join(base_dir, "Figure1_clean.png")
+out_tiff = os.path.join(base_dir, "Figure1_clean_600dpi.tiff")
+
+figure.save(out_png)
+figure.save(out_tiff, dpi=(600, 600), compression="tiff_lzw")
+
+print("Saved:")
+print(" PNG :", out_png)
+print(" TIFF:", out_tiff)
