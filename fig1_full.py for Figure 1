@@ -8,7 +8,7 @@ from PIL import Image
 # -------------------------------------------------------------------
 # Paths (EDIT ONLY THIS)
 # -------------------------------------------------------------------
-base_dir = "/Users/seung-hwan.kim/Desktop/TME_OU_Branching/Figure_1"
+base_dir = "/Figure_1"
 
 path_A = os.path.join(base_dir, "Fig1A.tiff")
 path_B = os.path.join(base_dir, "Fig1B.tiff")
