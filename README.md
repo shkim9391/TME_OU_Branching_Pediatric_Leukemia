@@ -26,4 +26,4 @@ python scripts/fig5_ablations_baselines.py
 # Figure 6
 python scripts/make_fig6_panels.py
 python scripts/make_fig6_composite.py
-# or: python scripts/make_fig6_fig7_layout_row1row2row3.py
+python scripts/make_fig6_fig7_layout_row1row2row3.py
