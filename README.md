@@ -429,8 +429,6 @@ import pandas as pd
 tme = pd.read_csv("results/tme_features/sample_tme_features.csv")
 ecotypes = pd.read_csv("results/ecotypes/patient_immune_ecotypes.csv")
 
-If your local output filenames differ, adjust paths accordingly.
-
 ⸻
 
 Reproducibility notes
