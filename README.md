@@ -6,8 +6,6 @@ Code and reproducible analysis for TME-modulated OU / OU–Branching modeling of
 Seung-Hwan Kim. *Single-cell immune ecotypes shape microenvironment-modulated evolutionary dynamics in pediatric leukemia*. Research Square, 03 March 2026, Version 1.  
 DOI: `10.21203/rs.3.rs-9012769/v1`
 
----
-
 ## Overview
 
 This repository implements a reproducible pipeline for studying how pediatric leukemia evolutionary dynamics are modulated by the tumor microenvironment. The central modeling idea is that patient-level evolutionary trajectories can be described by Ornstein–Uhlenbeck (OU) dynamics, optionally extended with branching structure, while allowing the TME to shift evolutionary optima and stabilizing-selection strength through immune ecotypes and TME covariates.
@@ -25,8 +23,6 @@ At a high level, the workflow:
 
 This repository is intended to support reproducibility of the manuscript analyses and figures, not to serve as a general-purpose software package.
 
----
-
 ## Biological and modeling focus
 
 The study uses pediatric leukemia single-cell cohorts from the ScPCA resource to test whether immune ecotypes and TME composition are associated with distinct evolutionary regimes. In the model:
@@ -39,39 +35,17 @@ The study uses pediatric leukemia single-cell cohorts from the ScPCA resource to
 
 The resulting workflow emphasizes interpretable, uncertainty-aware inference rather than black-box prediction.
 
----
-
 ## Repository layout
 
 ```text
 repo_root/
   scripts/                       # analysis and figure-generation scripts
-  models/                        # model code (e.g., ou_ecotype_model.py)
-  data/
-    SCPCP000022_SINGLE-CELL_ANN-DATA_MERGED_2025-12-08/
-      SCPCP000022_merged_rna.h5ad
-      single_cell_metadata.tsv
-    SCPCP000008_SINGLE-CELL_ANN-DATA_2025-12-08/
-      *_filtered_rna.h5ad
-      single_cell_metadata.tsv
-    clinical/
-      kmt2a_longitudinal_clean.xlsx
-  results/
-    tme_features/                # sample-level or patient-level TME features
-    combined/                    # merged or harmonized cohort-level tables
-    matrices/                    # design matrices / model-ready covariate tables
-    ecotypes/                    # ecotype assignments, centroids, summaries
-    models/                      # fitted model outputs, traces, summaries
-    ppc/                         # posterior predictive checks and diagnostics
-  figures/                       # exported manuscript figures
+  data/                          # data to run the analysis and figure-generation scripts
 
 ## Directory descriptions
 
 scripts/
 Contains the end-to-end analysis scripts, from preprocessing to figure generation. These scripts are generally intended to be run in sequence, although some figure-generation scripts can be re-run independently once upstream outputs already exist.
-
-models/
-Contains model definitions and reusable code for ecotype-modulated OU and OU–Branching analyses. This may include parameterized Bayesian model code, helper functions for priors, likelihood construction, and posterior summarization utilities.
 
 data/
 Contains processed or preprocessed input data required for the analysis.
@@ -81,12 +55,6 @@ Merged single-cell data and metadata for ScPCA cohort SCPCP000022.
 Per-sample filtered single-cell data and metadata for ScPCA cohort SCPCP000008.
 	•	clinical/kmt2a_longitudinal_clean.xlsx
 Cleaned longitudinal clinical table used to align molecular features with patient/timepoint evolution.
-
-results/
-Stores intermediate and final non-figure outputs. These outputs typically include TME composition tables, ecotype assignments, model design matrices, posterior summary tables, and posterior predictive diagnostics.
-
-figures/
-Stores final manuscript figures and composite layouts exported by the plotting scripts.
 
 ## Data inputs
 
@@ -106,8 +74,6 @@ The expected files include:
 	•	data/clinical/kmt2a_longitudinal_clean.xlsx
 
 This file provides the cleaned longitudinal structure needed to link patient-level evolution, disease phase, and model covariates.
-
-⸻
 
 Expected outputs
 
@@ -157,10 +123,6 @@ Written to results/ppc/, these may include:
 	•	observed-versus-simulated comparisons,
 	•	uncertainty calibration outputs,
 	•	model-fit diagnostics.
-
-Figures
-
-Written to figures/, including main-figure panels and composite layouts for the manuscript.
 
 Analysis workflow
 
@@ -292,8 +254,6 @@ These scripts assemble later-stage manuscript figures and composite layouts. Dep
 	•	cross-patient overlays,
 	•	multi-row final figure composition.
 
-⸻
-
 Script inventory
 
 Below is a brief description of each script currently listed in the repository.
@@ -353,8 +313,6 @@ Creates panel-level components for Figure 6.
 Assembles Figure 6 from the panel-level outputs.
 	•	scripts/make_fig6_fig7_layout_row1row2row3.py
 Builds the final multi-row layout used for Figure 6 and/or Figure 7.
-
-⸻
 
 Typical usage
 
@@ -429,36 +387,12 @@ import pandas as pd
 tme = pd.read_csv("results/tme_features/sample_tme_features.csv")
 ecotypes = pd.read_csv("results/ecotypes/patient_immune_ecotypes.csv")
 
-⸻
-
 Reproducibility notes
 	•	The repository is organized around a manuscript-specific workflow.
 	•	Intermediate outputs are written to results/ so that later stages can be regenerated without rerunning the entire pipeline.
 	•	Figure scripts assume that required upstream outputs already exist.
 	•	Some scripts may be cohort-specific or manuscript-version-specific.
 	•	Exact outputs may vary slightly depending on software versions and any stochastic model-fitting settings.
-
-For stronger reproducibility, it is recommended to archive:
-	•	the exact repository commit used for submission,
-	•	the exact processed input files,
-	•	the Python environment specification,
-	•	any posterior summary tables used directly in the manuscript.
-
-⸻
-
-Recommended repository additions
-
-For a cleaner public release, it would help to add:
-	•	requirements.txt or environment.yml
-	•	a short LICENSE file
-	•	a .gitignore
-	•	a small README under data/ describing input provenance
-	•	a results/README.md describing key generated files
-	•	a Zenodo-linked archival release for the submission version
-
-⸻
-
-Suggested requirements.txt
 
 A simple starting point could be:
 
@@ -478,8 +412,6 @@ Citation
 If you use this repository, please cite:
 
 Kim SH. Single-cell immune ecotypes shape microenvironment-modulated evolutionary dynamics in pediatric leukemia. Research Square. 2026. doi:10.21203/rs.3.rs-9012769/v1
-
-⸻
 
 Contact
 
