@@ -77,17 +77,25 @@ repo_root/
 
 ## Directory descriptions
 
-scripts/
-Contains the end-to-end analysis scripts, from preprocessing to figure generation. These scripts are generally intended to be run in sequence, although some figure-generation scripts can be re-run independently once upstream outputs already exist.
-
 data/
-Contains processed or preprocessed input data required for the analysis.
-	•	SCPCP000022_SINGLE-CELL_ANN-DATA_MERGED_2025-12-08/
-Merged single-cell data and metadata for ScPCA cohort SCPCP000022.
-	•	SCPCP000008_SINGLE-CELL_ANN-DATA_2025-12-08/
-Per-sample filtered single-cell data and metadata for ScPCA cohort SCPCP000008.
-	•	clinical/kmt2a_longitudinal_clean.xlsx
-Cleaned longitudinal clinical table used to align molecular features with patient/timepoint evolution.
+
+Contains processed and manuscript-facing input tables used in the ecotype-modulated OU / OU-Branching analysis, including:
+	•	cleaned longitudinal clinical data
+	•	patient-level master tables
+	•	covariate matrices
+	•	posterior summary tables for ecotype-level and patient-level results
+
+scripts/
+
+Contains the main preprocessing, feature-construction, model-fitting, posterior summarization, and figure-generation scripts, including:
+	•	single-cell preprocessing scripts for the ScPCA cohorts
+	•	TME merging and covariate-construction scripts
+	•	immune ecotype generation
+	•	ecotype-modulated OU / OU-Branching calibration
+	•	posterior summary and visualization scripts
+	•	main figure and supplementary figure scripts
+
+README.md
 
 ## Data inputs
 
