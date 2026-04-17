@@ -35,12 +35,45 @@ The study uses pediatric leukemia single-cell cohorts from the ScPCA resource to
 
 The resulting workflow emphasizes interpretable, uncertainty-aware inference rather than black-box prediction.
 
-## Repository layout
+## Repository structure
 
 ```text
 repo_root/
-  scripts/                       # analysis and figure-generation scripts
-  data/                          # data to run the analysis and figure-generation scripts
+  data/
+    Supplementary_Data_3_ecotype_posterior_sum...
+    Supplementary_Data_4_patient_posterior_summ...
+    covariate_matrix.csv
+    kmt2a_longitudinal_clean.xlsx
+    patient_master_table.csv
+
+  scripts/
+    SFig1.py
+    SFig2.py
+    build_covariates.py
+    fig1_full.py
+    fig2_full.py
+    fig3_full.py
+    fig4_full.py
+    fig5_ablations_baselines.py
+    fit_fig5_models.py
+    generate_patient_immune_ecotypes.py
+    make_SuppFig3_ppc_y_obs.py
+    make_SuppFig4_ou_trajectories_by_ecotype_lo...
+    make_fig6_layout_row1row2row3.py
+    make_fig6_main_and_SI_composites.py
+    merge_scpcp_TME.py
+    ou_ecotype_ou_branching_calibration.py
+    plot_mu_theta_ecotype_violin.py
+    plot_mu_theta_ecotype_with_patients.py
+    plot_mu_theta_scatter_with_centroids.py
+    scpc000022.py
+    scpc000022_clean.py
+    scpc00008_clean.py
+    scpc00008_stream.py
+    scpcp_combined_sample_TME_feature_broad.py
+    summary_mu_theta_ecotype.py
+
+  README.md
 
 ## Directory descriptions
 
