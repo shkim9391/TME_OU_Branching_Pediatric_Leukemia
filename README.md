@@ -459,3 +459,8 @@ Contact
 For questions about the analysis, figure generation, or manuscript-specific outputs, please contact the repository author.
 
 Author: Seung-Hwan Kim
+
+DOI
+10.5281/zenodo.19619392
+
+[![DOI](https://zenodo.org/badge/1170246489.svg)](https://doi.org/10.5281/zenodo.19619391)
