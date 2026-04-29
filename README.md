@@ -73,6 +73,15 @@ repo_root/
     scpcp_combined_sample_TME_feature_broad.py
     summary_mu_theta_ecotype.py
 
+ Figures/
+    Figure1_clean.png
+    Figure2_composite.png
+	Figure3_immune_ecotypes.png
+	Figure4_OU_dynamics_by_ecotype_fixedE.png
+	Fig5_ablations_baselines.png
+	Fig6_composite.png
+	Fig7_k_sensitivity.png
+
   README.md
 
 ## Directory descriptions
@@ -94,6 +103,15 @@ Contains the main preprocessing, feature-construction, model-fitting, posterior 
 	•	ecotype-modulated OU / OU-Branching calibration
 	•	posterior summary and visualization scripts
 	•	main figure and supplementary figure scripts
+
+ Figures/
+    Figure1_clean.png
+    Figure2_composite.png
+	Figure3_immune_ecotypes.png
+	Figure4_OU_dynamics_by_ecotype_fixedE.png
+	Fig5_ablations_baselines.png
+	Fig6_composite.png
+	Fig7_k_sensitivity.png
 
 README.md
 
