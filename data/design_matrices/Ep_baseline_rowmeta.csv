@@ -1,0 +1,101 @@
+participant_id,participant_id,diagnosis,subdiagnosis,tissue_location,disease_timing,cohort
+SJALL040053,SJALL040053,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJALL040066,SJALL040066,B-cell acute lymphoblastic leukemia,TCF3::PBX1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJALL040069,SJALL040069,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJALL040070,SJALL040070,B-cell acute lymphoblastic leukemia,TCF3::PBX1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJALL040099,SJALL040099,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJALL040100,SJALL040100,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJALL040103,SJALL040103,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJALL040119,SJALL040119,B-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJALL040137,SJALL040137,B-cell acute lymphoblastic leukemia,ETV6::RUNX1-like,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJALL067672,SJALL067672,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJALL067673,SJALL067673,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL004097,SJBALL004097,B-cell acute lymphoblastic leukemia,MEF2D-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL006,SJBALL006,B-cell acute lymphoblastic leukemia,MEF2D-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL014876,SJBALL014876,B-cell acute lymphoblastic leukemia,Near-haploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL021901,SJBALL021901,B-cell acute lymphoblastic leukemia,iAMP21,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL021964,SJBALL021964,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL021968,SJBALL021968,B-cell acute lymphoblastic leukemia,ZNF384-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL021973,SJBALL021973,B-cell acute lymphoblastic leukemia,ZNF384-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL022020,SJBALL022020,B-cell acute lymphoblastic leukemia,PAX5alt,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL022035,SJBALL022035,B-cell acute lymphoblastic leukemia,ETV6::RUNX1-like,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL022052,SJBALL022052,B-cell acute lymphoblastic leukemia,ETV6::RUNX1-like,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030036,SJBALL030036,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030040,SJBALL030040,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030059,SJBALL030059,B-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030072,SJBALL030072,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030090,SJBALL030090,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030095,SJBALL030095,B-cell acute lymphoblastic leukemia,PAX5alt,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030127,SJBALL030127,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030145,SJBALL030145,B-cell acute lymphoblastic leukemia,DUX4-R Type 1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030216,SJBALL030216,B-cell acute lymphoblastic leukemia,PAX5alt,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030247,SJBALL030247,B-cell acute lymphoblastic leukemia,ETV6::RUNX1-like,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030254,SJBALL030254,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030276,SJBALL030276,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030285,SJBALL030285,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030313,SJBALL030313,B-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030344,SJBALL030344,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030370,SJBALL030370,B-cell acute lymphoblastic leukemia,iAMP21,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030379,SJBALL030379,B-cell acute lymphoblastic leukemia,DUX4-R Type 1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030414,SJBALL030414,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030434,SJBALL030434,B-cell acute lymphoblastic leukemia,iAMP21,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030491,SJBALL030491,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030662,SJBALL030662,B-cell acute lymphoblastic leukemia,ETV6::RUNX1-like,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030718,SJBALL030718,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030734,SJBALL030734,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030762,SJBALL030762,B-cell acute lymphoblastic leukemia,DUX4-R Type 1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030821,SJBALL030821,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030871,SJBALL030871,B-cell acute lymphoblastic leukemia,iAMP21,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030923,SJBALL030923,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030971,SJBALL030971,B-cell acute lymphoblastic leukemia,ZNF384-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL030975,SJBALL030975,B-cell acute lymphoblastic leukemia,DUX4-R Type 1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL031052,SJBALL031052,B-cell acute lymphoblastic leukemia,Near-haploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL031087,SJBALL031087,B-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL031128,SJBALL031128,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL031144,SJBALL031144,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL031168,SJBALL031168,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL031267,SJBALL031267,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL031281,SJBALL031281,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL081,SJBALL081,B-cell acute lymphoblastic leukemia,MEF2D-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL087,SJBALL087,B-cell acute lymphoblastic leukemia,ZNF384-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL104,SJBALL104,B-cell acute lymphoblastic leukemia,MEF2D-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL113,SJBALL113,B-cell acute lymphoblastic leukemia,Other,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL182,SJBALL182,B-cell acute lymphoblastic leukemia,ZNF384-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL211,SJBALL211,B-cell acute lymphoblastic leukemia,MEF2D-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL243,SJBALL243,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJBALL255,SJBALL255,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJE2A063,SJE2A063,B-cell acute lymphoblastic leukemia,TCF3::PBX1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJE2A066,SJE2A066,B-cell acute lymphoblastic leukemia,TCF3::PBX1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJE2A067,SJE2A067,B-cell acute lymphoblastic leukemia,TCF3::PBX1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJHYPER022017,SJHYPER022017,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJHYPO021982,SJHYPO021982,B-cell acute lymphoblastic leukemia,PAX5alt,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJHYPO117,SJHYPO117,B-cell acute lymphoblastic leukemia,Near-haploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJHYPO120,SJHYPO120,B-cell acute lymphoblastic leukemia,Low-hypodiploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJHYPO123,SJHYPO123,B-cell acute lymphoblastic leukemia,Near-haploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJHYPO124,SJHYPO124,B-cell acute lymphoblastic leukemia,Near-haploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJHYPO143,SJHYPO143,B-cell acute lymphoblastic leukemia,Near-haploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJHYPO146,SJHYPO146,B-cell acute lymphoblastic leukemia,Near-haploid,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJINF022043,SJINF022043,B-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJMLL006,SJMLL006,B-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJMLL009,SJMLL009,B-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJMPAL011913,SJMPAL011913,Mixed phenotype acute leukemia,"T/M, BCL11B-R",Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJPHALL004,SJPHALL004,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJPHALL006,SJPHALL006,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJPHALL010,SJPHALL010,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJPHALL020,SJPHALL020,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJPHALL021,SJPHALL021,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJTALL005006,SJTALL005006,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+SJTALL030212,SJTALL030212,T-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Initial diagnosis,SCPCP000008_ALL
+TB-000001,TB-000001,B-cell acute lymphoblastic leukemia,NOS,Bone marrow,Initial diagnosis,SCPCP000022_diverse
+TB-000005,TB-000005,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,SCPCP000022_diverse
+TB-000012,TB-000012,T-cell acute lymphoblastic leukemia,,Bone marrow,Initial diagnosis,SCPCP000022_diverse
+TB-000013,TB-000013,T-cell acute lymphoblastic leukemia,,Bone marrow,Initial diagnosis,SCPCP000022_diverse
+TB-000018,TB-000018,B-cell acute lymphoblastic leukemia,ETV6::RUNX1; t(12;21)(p13.2;q22.1),Bone marrow,Initial diagnosis,SCPCP000022_diverse
+TB-000019,TB-000019,Acute myeloid leukemia,KMT2A::MLLT3; t(9;11)(p21.3;q23.3),Bone marrow,Initial diagnosis,SCPCP000022_diverse
+TB-000023,TB-000023,B-cell acute lymphoblastic leukemia,ETV6::RUNX1; t(12;21)(p13.2;q22.1),Bone marrow,Initial diagnosis,SCPCP000022_diverse
+TB-000025,TB-000025,B-cell acute lymphoblastic leukemia,ETV6::RUNX1; t(12;21)(p13.2;q22.1),Bone marrow,Initial diagnosis,SCPCP000022_diverse
+TB-000038,TB-000038,B-cell acute lymphoblastic leukemia,ETV6::RUNX1; t(12;21)(p13.2;q22.1),Bone marrow,Initial diagnosis,SCPCP000022_diverse
+TB-000048,TB-000048,B-cell acute lymphoblastic leukemia,ETV6::RUNX1; t(12;21)(p13.2;q22.1),Bone marrow,Initial diagnosis,SCPCP000022_diverse
+TB-000053,TB-000053,B-cell acute lymphoblastic leukemia,hyperdiploid,Bone marrow,Initial diagnosis,SCPCP000022_diverse
+TB-000054,TB-000054,B-cell acute lymphoblastic leukemia,ETV6::RUNX1; t(12;21)(p13.2;q22.1),Bone marrow,Initial diagnosis,SCPCP000022_diverse
+TB-000065,TB-000065,Acute myeloid leukemia,NOS,Bone marrow,Initial diagnosis,SCPCP000022_diverse
