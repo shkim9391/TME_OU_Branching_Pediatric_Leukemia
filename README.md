@@ -1,482 +1,242 @@
-# TME_OU_Branching_Pediatric_Leukemia
+# TME OU-Branching Pediatric Leukemia
 
-Code and reproducible analysis for TME-modulated OU / OU–Branching modeling of pediatric leukemia evolution using ScPCA single-cell tumor microenvironment (TME) composition and immune ecotypes. The repository includes preprocessing, sample-level TME feature construction, immune ecotype discovery, Bayesian model fitting, posterior summaries, posterior predictive checks, ablation analyses, and figure generation.
+Code and reproducible analysis for tumor microenvironment-modulated Ornstein-Uhlenbeck and OU-Branching modeling of pediatric leukemia evolution using single-cell Pediatric Cancer Atlas data.
 
-**Associated preprint**  
-Seung-Hwan Kim. *Single-cell immune ecotypes shape microenvironment-modulated evolutionary dynamics in pediatric leukemia*. Research Square, 03 March 2026, Version 1.  
-DOI: `10.21203/rs.3.rs-9012769/v1`
+This repository supports a workflow that extracts patient-level tumor microenvironment features from ScPCA single-cell RNA-seq datasets, defines ecological contexts from immune/TME composition, calibrates hierarchical OU models, compares baseline stochastic models, and generates manuscript figures and supplementary figures.
 
 ## Overview
 
-This repository implements a reproducible pipeline for studying how pediatric leukemia evolutionary dynamics are modulated by the tumor microenvironment. The central modeling idea is that patient-level evolutionary trajectories can be described by Ornstein–Uhlenbeck (OU) dynamics, optionally extended with branching structure, while allowing the TME to shift evolutionary optima and stabilizing-selection strength through immune ecotypes and TME covariates.
-
-At a high level, the workflow:
-
-1. preprocesses ScPCA single-cell datasets,
-2. aggregates single-cell annotations into sample-level TME composition features,
-3. builds patient/timepoint-level covariates,
-4. identifies immune ecotypes from standardized TME composition,
-5. fits ecotype-modulated OU / OU–Branching models,
-6. summarizes posterior estimates for drift and stabilizing-selection parameters,
-7. runs posterior predictive checks and ablation baselines, and
-8. generates the main manuscript figures.
-
-This repository is intended to support reproducibility of the manuscript analyses and figures, not to serve as a general-purpose software package.
-
-## Biological and modeling focus
-
-The study uses pediatric leukemia single-cell cohorts from the ScPCA resource to test whether immune ecotypes and TME composition are associated with distinct evolutionary regimes. In the model:
-
-- **OU drift / optimum terms** capture directional pull toward latent evolutionary states,
-- **OU stabilizing-selection parameters** quantify how strongly trajectories revert toward those states,
-- **branching structure** allows divergence of trajectories across disease progression or state transitions,
-- **immune ecotypes** provide discrete microenvironmental regimes, and
-- **continuous TME covariates** provide patient-level modulation of model parameters.
-
-The resulting workflow emphasizes interpretable, uncertainty-aware inference rather than black-box prediction.
-
-## Repository structure
-
-```text
-repo_root/
-  data/
-    Supplementary_Data_3_ecotype_posterior_sum...
-    Supplementary_Data_4_patient_posterior_summ...
-    covariate_matrix.csv
-    kmt2a_longitudinal_clean.xlsx
-    patient_master_table.csv
-
-  scripts/
-    SFig1.py
-    SFig2.py
-    build_covariates.py
-    fig1_full.py
-    fig2_full.py
-    fig3_full.py
-    fig4_full.py
-    fig5_ablations_baselines.py
-    fit_fig5_models.py
-    generate_patient_immune_ecotypes.py
-    make_SuppFig3_ppc_y_obs.py
-    make_SuppFig4_ou_trajectories_by_ecotype_lo...
-    make_fig6_layout_row1row2row3.py
-    make_fig6_main_and_SI_composites.py
-    merge_scpcp_TME.py
-    ou_ecotype_ou_branching_calibration.py
-    plot_mu_theta_ecotype_violin.py
-    plot_mu_theta_ecotype_with_patients.py
-    plot_mu_theta_scatter_with_centroids.py
-    scpc000022.py
-    scpc000022_clean.py
-    scpc00008_clean.py
-    scpc00008_stream.py
-    scpcp_combined_sample_TME_feature_broad.py
-    summary_mu_theta_ecotype.py
-
- Figures/
-    Figure1_clean.png
-    Figure2_composite.png
-	Figure3_immune_ecotypes.png
-	Figure4_OU_dynamics_by_ecotype_fixedE.png
-	Fig5_ablations_baselines.png
-	Fig6_composite.png
-	Fig7_k_sensitivity.png
-
-  README.md
-
-## Directory descriptions
-
-data/
-
-Contains processed and manuscript-facing input tables used in the ecotype-modulated OU / OU-Branching analysis, including:
-	•	cleaned longitudinal clinical data
-	•	patient-level master tables
-	•	covariate matrices
-	•	posterior summary tables for ecotype-level and patient-level results
-
-scripts/
-
-Contains the main preprocessing, feature-construction, model-fitting, posterior summarization, and figure-generation scripts, including:
-	•	single-cell preprocessing scripts for the ScPCA cohorts
-	•	TME merging and covariate-construction scripts
-	•	immune ecotype generation
-	•	ecotype-modulated OU / OU-Branching calibration
-	•	posterior summary and visualization scripts
-	•	main figure and supplementary figure scripts
-
- Figures/
-    Figure1_clean.png
-    Figure2_composite.png
-	Figure3_immune_ecotypes.png
-	Figure4_OU_dynamics_by_ecotype_fixedE.png
-	Fig5_ablations_baselines.png
-	Fig6_composite.png
-	Fig7_k_sensitivity.png
+Pediatric leukemias often show clinically meaningful heterogeneity that is not fully explained by recurrent coding mutations alone. This project models leukemia evolution as a microenvironment-modulated stochastic process, where patient-level tumor microenvironment composition informs latent evolutionary regimes.
 
-README.md
+The final workflow uses revised ecological contexts E1-E4 derived from single-cell TME composition:
 
-## Data inputs
+| Context | Interpretation | Cohort size |
+|---|---:|---:|
+| E1 | Typical / low-deviation context | 88 |
+| E2 | T / unknown-enriched context | 2 |
+| E3 | Unknown-enriched context | 7 |
+| E4 | B / myeloid-enriched context | 3 |
 
-This repository expects the following major input sources:
+For longitudinal OU modeling, only contexts with longitudinal support contribute directly to transition-based inference:
 
-1. ScPCA single-cell datasets
+| Context | Longitudinally supported participants | Transitions |
+|---|---:|---:|
+| E1 | 32 | 422 |
+| E2 | 0 | 0 |
+| E3 | 3 | 12 |
+| E4 | 0 | 0 |
 
-Two pediatric leukemia single-cell resources are used as the basis for TME feature extraction and ecotype construction:
-	•	SCPCP000022
-	•	SCPCP000008
+## Data Sources
 
-The expected files include:
-	•	.h5ad AnnData objects containing expression matrices and cell-level metadata
-	•	single_cell_metadata.tsv files containing cell annotations and related metadata
+The workflow uses public single-cell pediatric leukemia datasets from the Single-cell Pediatric Cancer Atlas:
 
-2. Clinical longitudinal data
-	•	data/clinical/kmt2a_longitudinal_clean.xlsx
+- `SCPCP000022`: diverse pediatric leukemia single-cell RNA-seq cohort.
+- `SCPCP000008`: pediatric acute lymphoblastic leukemia single-cell RNA-seq cohort.
 
-This file provides the cleaned longitudinal structure needed to link patient-level evolution, disease phase, and model covariates.
+Raw `.h5ad` files and metadata should be downloaded from the ScPCA Portal and placed under `data/raw/`. Large raw single-cell files are not redistributed in this repository.
 
-Expected outputs
+## Workflow Summary
 
-The pipeline produces several classes of outputs:
+### 1. Single-cell TME feature extraction
 
-TME feature outputs
+| Step | Script | Main input | Main output |
+|---:|---|---|---|
+| 1 | `scpc000022.py` | SCPCP000022 `.h5ad` and metadata | `scpcp22_sample_TME_features.csv` |
+| 2 | `scpc000022_clean.py` | SCPCP000022 TME features | `scpcp22_sample_TME_features_broad.csv` |
+| 3 | `scpc00008_clean.py` | SCPCP000008 `.h5ad` and metadata | `scpcp8_sample_TME_features_raw.csv`, `scpcp8_sample_TME_features_broad.csv` |
+| 4 | `scpc00008_stream.py` | SCPCP000008 `.h5ad` and metadata | `scpcp8_sample_TME_features_broad.csv` |
 
-Written to results/tme_features/, these typically include:
-	•	per-sample cell-type fractions,
-	•	broad TME composition summaries,
-	•	patient/timepoint aggregated microenvironment covariates.
+`scpc00008_stream.py` is the preferred memory-safe implementation for SCPCP000008.
 
-Combined cohort tables
+### 2. Cohort merging and patient-level design matrices
 
-Written to results/combined/, these may include:
-	•	harmonized tables combining SCPCP000008 and SCPCP000022,
-	•	merged patient-level TME features,
-	•	cross-cohort summary tables used for downstream design-matrix construction.
+| Step | Script | Main output |
+|---:|---|---|
+| 5 | `merge_scpcp_TME.py` | `scpcp_combined_sample_TME_features_broad.csv` |
+| 6 | `scpcp_combined_sample_TME_feature_broad.py` | `scpcp_combined_participant_TME_features_broad.csv` |
+| 7 | `scpcp_combined_sample_TME_features_modelready.py` | model-ready combined TME table |
+| 8-13 | `make_E_*` scripts | sample-level and patient-level design matrices |
+| 14 | `pm_model_ou_branching_model.py` | full PyMC model attempt; high memory demand |
+| 15 | `pm_model_ou_branching_minimal.py` | minimal PyMC model; working implementation |
 
-Matrices and covariates
+Key design matrix outputs include:
 
-Written to results/matrices/, these typically include:
-	•	standardized covariate matrices,
-	•	ecotype input matrices,
-	•	patient-by-feature model tables.
+- `E_sample_simple_z.csv`
+- `E_sample_simple_z.npy`
+- `Ep_baseline_z.csv`
+- `Ep_baseline_z.npy`
+- `Ep_baseline_rowmeta.csv`
+- `Ep_all_z.csv`
+- `Ep_all_z.npy`
 
-Ecotype outputs
+### 3. Patient mapping and covariate construction
 
-Written to results/ecotypes/, these may include:
-	•	immune ecotype assignments,
-	•	ecotype centroids,
-	•	cluster summaries,
-	•	patient/ecotype mapping tables.
+| Step | Script | Main output |
+|---:|---|---|
+| 16 | `ou_branching_TME_block.py` | `patient_master_table.csv`, `patient_id_mapping.csv` |
+| 17 | `merge_TME_with_patients.py` | merged TME and longitudinal patient table |
+| 18 | `build_covariates.py` | `covariate_matrix.csv` |
+| 19 | `generate_patient_immune_ecotypes.py` | `patient_immune_ecotypes.csv` |
 
-Model outputs
+The patient ID mapping file was manually completed after automated matching.
 
-Written to results/models/, these may include:
-	•	posterior samples or serialized fit objects,
-	•	posterior summaries for drift and stabilizing-selection parameters,
-	•	patient-level and ecotype-level parameter estimates,
-	•	ablation and baseline comparison outputs.
+### 4. Exploratory interpretation
 
-Posterior predictive checks
+Exploratory analysis includes PCA, local UMAP, diagnosis/subdiagnosis coloring, outlier detection, immune/ecological context interpretation, and radar plots for representative outlier patients.
 
-Written to results/ppc/, these may include:
-	•	posterior predictive summaries,
-	•	observed-versus-simulated comparisons,
-	•	uncertainty calibration outputs,
-	•	model-fit diagnostics.
+Representative outputs include:
 
-Analysis workflow
-
-The typical workflow proceeds in the following stages.
-
-Stage 1. Preprocess cohort SCPCP000022
-
-python scripts/scpc000022.py
-python scripts/scpc000022_clean.py
-
-These scripts prepare and clean the SCPCP000022 cohort data for downstream use. Typical operations may include:
-	•	loading the merged .h5ad,
-	•	harmonizing observation metadata,
-	•	filtering invalid or incomplete entries,
-	•	standardizing sample or patient identifiers,
-	•	exporting cleaned tables for aggregation.
-
-Stage 2. Preprocess cohort SCPCP000008
-
-python scripts/scpc00008_clean.py
-python scripts/scpc00008_stream.py
-
-These scripts process the SCPCP000008 cohort, likely working across multiple per-sample .h5ad files. Typical operations may include:
-	•	reading per-sample filtered objects,
-	•	aligning metadata fields across samples,
-	•	extracting cell annotations,
-	•	generating sample-level summaries.
-
-Stage 3. Merge cohorts and build TME feature tables
-
-python scripts/merge_scpcp_TME.py
-python scripts/scpcp_combined_sample_TME_feature_broad.py
-python scripts/build_covariates.py
-
-This stage combines cohort-level outputs and constructs model-ready TME covariates.
-
-Typical outputs include:
-	•	sample-level TME composition matrices,
-	•	broad cell-type fraction tables,
-	•	standardized patient-level covariates,
-	•	matrices for ecotype discovery and downstream modeling.
-
-Stage 4. Identify patient immune ecotypes
-
-python scripts/generate_patient_immune_ecotypes.py
-
-This script clusters or assigns samples/patients into immune ecotypes using the derived TME composition features. In the manuscript context, these ecotypes represent discrete microenvironmental regimes used to modulate model parameters.
-
-Typical outputs may include:
-	•	ecotype labels per patient or sample,
-	•	ecotype centroid tables,
-	•	cluster-membership summaries,
-	•	files used in ecotype visualization panels.
-
-Stage 5. Fit ecotype-modulated OU / OU–Branching models
-
-python scripts/ou_ecotype_ou_branching_calibration.py
-
-This is the core model-fitting step. It calibrates ecotype-modulated OU / OU–Branching dynamics using the patient-level longitudinal structure and TME-derived covariates.
-
-Depending on implementation, this script may:
-	•	build design matrices,
-	•	specify priors,
-	•	fit Bayesian models,
-	•	summarize posterior samples,
-	•	export posterior objects and diagnostics.
-
-Stage 6. Summarize posterior parameters
-
-python scripts/summary_mu_theta_ecotype.py
-
-This step generates summary tables for key model parameters, especially the ecotype-associated posterior distributions of:
-	•	mu-related quantities (drift / optimum terms),
-	•	theta-related quantities (stabilizing-selection terms).
-
-These summaries underlie later plots and interpretation.
-
-Stage 7. Generate ecotype parameter visualizations
-
-python scripts/plot_mu_thetha_ecotype_violin.py
-python scripts/plot_mu_theta_ecotype_with_patients.py
-python scripts/plot_mu_theta_scatter_with_centroids.py
-
-These scripts visualize the posterior parameter structure across ecotypes and patients.
-
-Typical figure types include:
-	•	violin plots of posterior distributions by ecotype,
-	•	patient-overlaid ecotype parameter plots,
-	•	scatter plots with ecotype centroids.
-
-Figure generation
-
-Main figures
-
-python scripts/fig2_full.py
-python scripts/fig3_full.py
-python scripts/fig4_full.py
-
-These scripts generate the main manuscript figures after preprocessing, ecotype generation, and model fitting have completed.
-
-The exact panel contents depend on the current manuscript version, but broadly:
-	•	Figure 2: TME/ecotype construction or cohort-level composition summaries
-	•	Figure 3: ecotype-associated parameter summaries
-	•	Figure 4: integrated model-based biological interpretation and/or patient-level visualization
-
-Figure 5
-
-python scripts/fit_fig5_models.py
-python scripts/fig5_ablations_baselines.py
-
-These scripts support the model-comparison and ablation figure.
-
-Typical analyses here may include:
-	•	OU-only baseline,
-	•	ecotype-shuffled control,
-	•	reduced covariate models,
-	•	alternative calibration setups,
-	•	predictive or uncertainty-comparison summaries.
-
-Figures 6 and 7
-
-python scripts/make_fig6_panels.py
-python scripts/make_fig6_composite.py
-python scripts/make_fig6_fig7_layout_row1row2row3.py
-
-These scripts assemble later-stage manuscript figures and composite layouts. Depending on the version of the manuscript, they may include:
-	•	posterior predictive checks,
-	•	centroid or ecotype summary panels,
-	•	cross-patient overlays,
-	•	multi-row final figure composition.
-
-Script inventory
-
-Below is a brief description of each script currently listed in the repository.
-
-Preprocessing and cohort harmonization
-	•	scripts/scpc000022.py
-Loads and preprocesses the SCPCP000022 merged single-cell dataset.
-	•	scripts/scpc000022_clean.py
-Cleans metadata and prepares SCPCP000022 for harmonized downstream analysis.
-	•	scripts/scpc00008_clean.py
-Cleans SCPCP000008 sample-level inputs and harmonizes annotation structure.
-	•	scripts/scpc00008_stream.py
-Processes SCPCP000008 files in a sample-wise or stream-like workflow.
-	•	scripts/merge_scpcp_TME.py
-Merges cohort-level TME information across SCPCP000008 and SCPCP000022.
-	•	scripts/scpcp_combined_sample_TME_feature_broad.py
-Builds broad sample-level TME composition features for combined analysis.
-	•	scripts/build_covariates.py
-Creates model-ready covariates, standardizations, and matrices.
-
-Ecotype analysis
-	•	scripts/generate_patient_immune_ecotypes.py
-Infers or assigns patient-level immune ecotypes from TME composition features.
-
-Model fitting and summaries
-	•	scripts/ou_ecotype_ou_branching_calibration.py
-Fits the ecotype-modulated OU / OU–Branching model.
-	•	scripts/summary_mu_theta_ecotype.py
-Summarizes posterior parameter estimates by ecotype.
-
-Parameter visualization
-	•	scripts/plot_mu_thetha_ecotype_violin.py
-Generates violin plots for ecotype-stratified posterior parameter distributions.
-	•	scripts/plot_mu_theta_ecotype_with_patients.py
-Overlays patient-level estimates on ecotype-level parameter summaries.
-	•	scripts/plot_mu_theta_scatter_with_centroids.py
-Generates scatter plots of ecotype parameter space with centroids.
-
-Main figure scripts
-	•	scripts/fig2_full.py
-Generates the full Figure 2.
-	•	scripts/fig3_full.py
-Generates the full Figure 3.
-	•	scripts/fig4_full.py
-Generates the full Figure 4.
-
-Figure 5 scripts
-	•	scripts/fit_fig5_models.py
-Fits models used in the Figure 5 comparison / ablation analyses.
-	•	scripts/fig5_ablations_baselines.py
-Generates Figure 5 from the fitted comparison outputs.
-
-Figures 6–7 layout scripts
-	•	scripts/make_fig6_panels.py
-Creates panel-level components for Figure 6.
-	•	scripts/make_fig6_composite.py
-Assembles Figure 6 from the panel-level outputs.
-	•	scripts/make_fig6_fig7_layout_row1row2row3.py
-Builds the final multi-row layout used for Figure 6 and/or Figure 7.
-
-Typical usage
-
-A minimal full run from the repository root may look like:
-
-python scripts/scpc000022.py
-python scripts/scpc000022_clean.py
-python scripts/scpc00008_clean.py
-python scripts/scpc00008_stream.py
-
-python scripts/merge_scpcp_TME.py
-python scripts/scpcp_combined_sample_TME_feature_broad.py
-python scripts/build_covariates.py
-python scripts/generate_patient_immune_ecotypes.py
-
-python scripts/ou_ecotype_ou_branching_calibration.py
-python scripts/summary_mu_theta_ecotype.py
-
-python scripts/plot_mu_thetha_ecotype_violin.py
-python scripts/plot_mu_theta_ecotype_with_patients.py
-python scripts/plot_mu_theta_scatter_with_centroids.py
-
-python scripts/fig2_full.py
-python scripts/fig3_full.py
-python scripts/fig4_full.py
-
-python scripts/fit_fig5_models.py
-python scripts/fig5_ablations_baselines.py
-
-python scripts/make_fig6_panels.py
-python scripts/make_fig6_composite.py
-python scripts/make_fig6_fig7_layout_row1row2row3.py
-
-Python environment
-
-The analysis was developed in Python 3 and uses the standard scientific Python stack. A typical environment will require many of the following packages:
-
-pip install numpy pandas scipy matplotlib scikit-learn openpyxl
-pip install scanpy anndata
-pip install pymc arviz
-
-Depending on the exact script implementations, additional packages may be required.
-
-A conda-based setup is also reasonable, for example:
-
-conda create -n tme-ou python=3.11
-conda activate tme-ou
-pip install numpy pandas scipy matplotlib scikit-learn openpyxl scanpy anndata pymc arviz
-
-Typical data loading examples
-
-Read the cleaned clinical longitudinal table
-
-import pandas as pd
-
-clinical = pd.read_excel("data/clinical/kmt2a_longitudinal_clean.xlsx")
-print(clinical.head())
-
-Load a single-cell AnnData object
-
-import scanpy as sc
-
-adata = sc.read_h5ad(
-    "data/SCPCP000022_SINGLE-CELL_ANN-DATA_MERGED_2025-12-08/SCPCP000022_merged_rna.h5ad"
-)
-print(adata)
-
-Read ecotype or TME summary tables
-
-import pandas as pd
-
-tme = pd.read_csv("results/tme_features/sample_tme_features.csv")
-ecotypes = pd.read_csv("results/ecotypes/patient_immune_ecotypes.csv")
-
-Reproducibility notes
-	•	The repository is organized around a manuscript-specific workflow.
-	•	Intermediate outputs are written to results/ so that later stages can be regenerated without rerunning the entire pipeline.
-	•	Figure scripts assume that required upstream outputs already exist.
-	•	Some scripts may be cohort-specific or manuscript-version-specific.
-	•	Exact outputs may vary slightly depending on software versions and any stochastic model-fitting settings.
-
-A simple starting point could be:
-
-numpy
-pandas
-scipy
-matplotlib
-scikit-learn
-openpyxl
-scanpy
-anndata
-pymc
-arviz
+- `PCA of Covariates (2D).png`
+- `Local UMAP of Covariates (2D).png`
+- `PCA Colored by Diagnosis.png`
+- `Local UMAP Colored by Diagnosis.png`
+- `PCA Colored by Subdiagnosis.png`
+- `Local UMAP Colored by Subdiagnosis.png`
+- `Top 10 PCA Outliers.png`
+- `Immune ecotype composition (k = 4).png`
+- `Mean TME Composition per Immune Ecotype.png`
+- `Summary Four Immune Ecotypes.png`
+- `UMAP Colored by Immune Ecotype.png`
+
+### 5. Final ecological-context model
+
+The final manuscript model uses the revised ecological-context assignment from Figure 3.
+
+| Step | Script | Main input | Main output |
+|---:|---|---|---|
+| 20 | `fig3_full_revised.py` | `covariate_matrix.csv`, `patient_master_table.csv` | `patient_ecological_context_assignments.csv`, `ecological_context_master_table.csv`, `ecological_context_color_key.json` |
+| 21 | `ou_revised_context_calibration.py` | ecological contexts, `kmt2a_longitudinal_clean.xlsx` | `ou_revised_ecological_context_idata_ppc.nc` |
+| 22 | `check_longitudinal_support.py` | ecological contexts, longitudinal data | `longitudinal_support_revised_context.csv` |
+| 23 | `fig4_revised.py` | posterior model output and context files | Figure 4 and parameter summaries |
+
+Final calibration diagnostics:
+
+- Total divergences: 0
+- R-hat: approximately 1.000-1.001
+- Effective sample sizes: generally high
+
+The earlier `ou_ecotype_ou_branching_calibration.py` script is retained as a legacy immune-ecotype-based model. The revised ecological-context model is the final workflow used for Figure 3, Figure 4, Figure 5, and Supplementary Figures S4-S5.
+
+## Main Figures
+
+| Figure | Script | Main outputs |
+|---|---|---|
+| Figure 1 | `fig1_revised_v2.py` | `Figure1_revised_v2.png`, `Figure1_revised_v2_600dpi.tiff` |
+| Figure 2 | `fig2_full_revised.py` | `Figure2_composite_revised.png`, `Figure2_composite_revised.tiff` |
+| Figure 3 | `fig3_full_revised.py` | `Figure3_candidate_ecological_contexts.png`, `.tiff`, context tables |
+| Figure 4 | `fig4_revised.py` | `Figure4_OU_parameter_summaries_by_context.png`, `.tiff`, parameter summary CSV |
+| Figure 5 | `fig5_ablations_baselines_revised.py` | `Figure5_model_comparison_revised.png`, `.tiff`, `.pdf`, model comparison CSV |
+
+## Baseline and Ablation Models
+
+Figure 5 compares the final context-aware OU model against baseline or ablation models.
+
+| Script | Output |
+|---|---|
+| `fig5_model_file_check.py` | `Figure5_model_file_inventory.csv` |
+| `fit_revised_baseline_models.py` | OU-only, shuffled-context, random-walk, and static-context model traces |
+| `fig5_ablations_baselines_revised.py` | `model_comparison_revised_context.csv`, Figure 5 |
+
+Model audit summary:
+
+- `n_obs = 434`
+- same observed response vector as context-aware OU model: `True`
+- log likelihood available: `True`
+- posterior predictive samples available: `True`
+
+## Supplementary Figures
+
+| Supplement | Script | Main outputs |
+|---|---|---|
+| SuppFigS1 | `generate_suppfigS1_cohort_structure_context_distribution.py` | cohort/context distribution figure and summary table |
+| SuppFigS2 | `generate_suppfigS2_context_discovery_tme_profiles.py` | context discovery profiles and prototype tables |
+| SuppFigS3 | `generate_suppfigS3_mcmc_diagnostics.py` | MCMC diagnostics figure and summary CSV |
+| SuppFigS4 | `generate_suppfigS4_posterior_mu_theta_by_context.py` | posterior mu/theta summaries by context |
+| SuppFigS5 | `generate_suppfigS5_joint_mu_theta_by_context.py` | joint posterior mu-theta summaries |
+| SuppFigS6 | `generate_suppfigS6_posterior_predictive_calibration_trajectories.py` | posterior predictive calibration trajectories |
+
+## Suggested Execution Order
+
+```bash
+# 1. Extract and clean ScPCA TME features
+python scripts/preprocessing/scpc000022.py
+python scripts/preprocessing/scpc000022_clean.py
+python scripts/preprocessing/scpc00008_stream.py
+
+# 2. Merge cohorts and generate design matrices
+python scripts/preprocessing/merge_scpcp_TME.py
+python scripts/preprocessing/scpcp_combined_sample_TME_feature_broad.py
+python scripts/design_matrices/make_E_sample_simple.py
+python scripts/design_matrices/make_E_patient_simple.py
+
+# 3. Build patient-level covariates
+python scripts/modeling/ou_branching_TME_block.py
+python scripts/modeling/merge_TME_with_patients.py
+python scripts/modeling/build_covariates.py
+
+# 4. Generate ecological contexts
+python scripts/figure_generation/fig3_full_revised.py
+python scripts/figure_generation/fig3_safetry_check.py
+
+# 5. Calibrate final ecological-context OU model
+python scripts/modeling/ou_revised_context_calibration.py
+
+# 6. Check longitudinal support and generate final figures
+python scripts/figure_generation/check_longitudinal_support.py
+python scripts/figure_generation/fig1_revised_v2.py
+python scripts/figure_generation/fig2_full_revised.py
+python scripts/figure_generation/fig4_revised.py
+
+# 7. Fit baselines and generate Figure 5
+python scripts/baselines/fig5_model_file_check.py
+python scripts/baselines/fit_revised_baseline_models.py
+python scripts/figure_generation/fig5_ablations_baselines_revised.py
+
+# 8. Generate supplementary figures
+python scripts/supplementary/generate_suppfigS1_cohort_structure_context_distribution.py
+python scripts/supplementary/generate_suppfigS2_context_discovery_tme_profiles.py
+python scripts/supplementary/generate_suppfigS3_mcmc_diagnostics.py
+python scripts/supplementary/generate_suppfigS4_posterior_mu_theta_by_context.py
+python scripts/supplementary/generate_suppfigS5_joint_mu_theta_by_context.py
+python scripts/supplementary/generate_suppfigS6_posterior_predictive_calibration_trajectories.py
+
+Software Requirements
+
+The workflow was developed in Python and uses common scientific-computing and Bayesian-modeling libraries, including:
+
+* numpy
+* pandas
+* scipy
+* scikit-learn
+* matplotlib
+* seaborn
+* anndata
+* scanpy
+* umap-learn
+* pymc
+* arviz
+* xarray
+* netcdf4
+* openpyxl
+
+Reproducibility Notes
+
+* Raw ScPCA files are not included because of file size and data-distribution constraints.
+* Processed tables and model outputs are organized to reproduce the manuscript figures.
+* The final model is ou_revised_context_calibration.py, which uses revised ecological contexts E1-E4.
+* ou_ecotype_ou_branching_calibration.py is retained for comparison with the earlier immune-ecotype formulation.
+* Figure 5 baseline models should be regenerated before final model comparison if any upstream context assignments or longitudinal data tables change.
 
 Citation
 
-If you use this repository, please cite:
+If you use this repository, please cite the associated manuscript once available.
 
-Kim SH. Single-cell immune ecotypes shape microenvironment-modulated evolutionary dynamics in pediatric leukemia. Research Square. 2026. doi:10.21203/rs.3.rs-9012769/v1
+Author
 
-Contact
-
-For questions about the analysis, figure generation, or manuscript-specific outputs, please contact the repository author.
-
-Author: Seung-Hwan Kim
+Seung-Hwan Kim, PhD
+Associate Professor and Program Director of Biology
+Fisher College
+Visiting Scholar, Department of Pediatric Oncology, Dana-Farber Cancer Institute
 
 DOI
 10.5281/zenodo.19619392
