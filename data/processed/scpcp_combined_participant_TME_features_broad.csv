@@ -1,0 +1,114 @@
+participant_id,diagnosis,subdiagnosis,frac_T,frac_B,frac_myeloid,frac_NK,frac_stromal,frac_known
+SJALL040053,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,0.0,0.0,0.0,0.032258064516129,0.0,1.0
+SJALL040066,B-cell acute lymphoblastic leukemia,TCF3::PBX1,0.0,0.0,0.0,0.0297858462876399,0.0,1.0
+SJALL040069,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,0.0,0.0,0.0,0.0432981556366505,0.0,1.0
+SJALL040070,B-cell acute lymphoblastic leukemia,TCF3::PBX1,0.0,0.0,0.0,0.0206470642455525,0.0,1.0
+SJALL040099,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,0.0,0.0,0.0,0.0030775543701272,0.0,1.0
+SJALL040100,B-cell acute lymphoblastic leukemia,Hyperdiploid,0.0,0.0,0.0,0.0192568818664362,0.0,1.0
+SJALL040103,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,0.0,0.0,0.0,0.0139435109045405,0.0,1.0
+SJALL040119,B-cell acute lymphoblastic leukemia,KMT2A-R,0.0,0.0,0.0,0.0078314376281931,0.0,1.0
+SJALL040137,B-cell acute lymphoblastic leukemia,ETV6::RUNX1-like,0.0,0.0,0.0,0.028223026833875398,0.0,1.0
+SJALL067628,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,0.0,0.0,0.0,0.0,0.0,1.0
+SJALL067630,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,0.0,0.0,0.0,0.0,0.0,1.0
+SJALL067672,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,0.0,0.0,0.0,0.0,0.0,1.0
+SJALL067673,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,0.0,0.0,0.0,0.0,0.0,1.0
+SJBALL004097,B-cell acute lymphoblastic leukemia,MEF2D-R,0.0,0.0,0.0,0.0426865671641791,0.0,1.0
+SJBALL006,B-cell acute lymphoblastic leukemia,MEF2D-R,0.0,0.0,0.0,0.01960446731420815,0.0,1.0
+SJBALL014876,B-cell acute lymphoblastic leukemia,Near-haploid,0.0,0.0,0.0,0.0244862264975951,0.0,1.0
+SJBALL021901,B-cell acute lymphoblastic leukemia,iAMP21,0.0,0.0,0.0,0.0176967421906421,0.0,1.0
+SJBALL021947,B-cell acute lymphoblastic leukemia,PAX5alt,0.0,0.0,0.0,0.1200357345894582,0.0,1.0
+SJBALL021964,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,0.0,0.0,0.0,0.0130760790051207,0.0,1.0
+SJBALL021968,B-cell acute lymphoblastic leukemia,ZNF384-R,0.0,0.0,0.0,0.0200120827669536,0.0,1.0
+SJBALL021973,B-cell acute lymphoblastic leukemia,ZNF384-R,0.0,0.0,0.0,0.0139212776482227,0.0,1.0
+SJBALL022020,B-cell acute lymphoblastic leukemia,PAX5alt,0.0,0.0,0.0,0.0161588180978762,0.0,1.0
+SJBALL022035,B-cell acute lymphoblastic leukemia,ETV6::RUNX1-like,0.0,0.0,0.0,0.0101083032490974,0.0,1.0
+SJBALL022052,B-cell acute lymphoblastic leukemia,ETV6::RUNX1-like,0.0,0.0,0.0,0.0400179856115107,0.0,1.0
+SJBALL030036,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,0.0,0.0,0.0,0.0716280068728522,0.0,1.0
+SJBALL030040,B-cell acute lymphoblastic leukemia,Hyperdiploid,0.0,0.0,0.0,0.0078626390242263,0.0,1.0
+SJBALL030059,B-cell acute lymphoblastic leukemia,KMT2A-R,0.0,0.0,0.0,0.0131676405234137,0.0,1.0
+SJBALL030072,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,0.0,0.0,0.0,0.0259315869920413,0.0,1.0
+SJBALL030090,B-cell acute lymphoblastic leukemia,Hyperdiploid,0.0,0.0,0.0,0.0129039026437263,0.0,1.0
+SJBALL030095,B-cell acute lymphoblastic leukemia,PAX5alt,0.0,0.0,0.0,0.0360495681562147,0.0,1.0
+SJBALL030123,B-cell acute lymphoblastic leukemia,KMT2A-R,0.0,0.0,0.0,0.0576624388490899,0.0,1.0
+SJBALL030127,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,0.0,0.0,0.0,0.0271871732310909,0.0,1.0
+SJBALL030145,B-cell acute lymphoblastic leukemia,DUX4-R Type 1,0.0,0.0,0.0,0.0676895306859205,0.0,1.0
+SJBALL030216,B-cell acute lymphoblastic leukemia,PAX5alt,0.0,0.0,0.0,0.0278487073092882,0.0,1.0
+SJBALL030247,B-cell acute lymphoblastic leukemia,ETV6::RUNX1-like,0.0,0.0,0.0,0.0426736337905508,0.0,1.0
+SJBALL030254,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,0.0,0.0,0.0,0.0506847158822603,0.0,1.0
+SJBALL030276,B-cell acute lymphoblastic leukemia,Hyperdiploid,0.0,0.0,0.0,0.0138746896451,0.0,1.0
+SJBALL030285,B-cell acute lymphoblastic leukemia,Hyperdiploid,0.0,0.0,0.0,0.0220823444432979,0.0,1.0
+SJBALL030313,B-cell acute lymphoblastic leukemia,KMT2A-R,0.0,0.0,0.0,0.0196499978501096,0.0,1.0
+SJBALL030344,B-cell acute lymphoblastic leukemia,BCR::ABL1,0.0,0.0,0.0,0.0358536937978892,0.0,1.0
+SJBALL030370,B-cell acute lymphoblastic leukemia,iAMP21,0.0,0.0,0.0,0.0158175303679105,0.0,1.0
+SJBALL030379,B-cell acute lymphoblastic leukemia,DUX4-R Type 1,0.0,0.0,0.0,0.0144523326572008,0.0,1.0
+SJBALL030414,B-cell acute lymphoblastic leukemia,BCR::ABL1,0.0,0.0,0.0,0.0344073190135242,0.0,1.0000000000000002
+SJBALL030434,B-cell acute lymphoblastic leukemia,iAMP21,0.0,0.0,0.0,0.0076377523186033,0.0,1.0
+SJBALL030491,B-cell acute lymphoblastic leukemia,Hyperdiploid,0.0,0.0,0.0,0.029035380148403,0.0,1.0
+SJBALL030662,B-cell acute lymphoblastic leukemia,ETV6::RUNX1-like,0.0,0.0,0.0,0.0180233946049176,0.0,1.0
+SJBALL030718,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,0.0,0.0,0.0,0.0043311594563648,0.0,1.0
+SJBALL030734,B-cell acute lymphoblastic leukemia,BCR::ABL1,0.0,0.0,0.0,0.0129926188112401,0.0,1.0
+SJBALL030762,B-cell acute lymphoblastic leukemia,DUX4-R Type 1,0.0,0.0,0.0,0.0321042224031638,0.0,1.0
+SJBALL030821,B-cell acute lymphoblastic leukemia,Hyperdiploid,0.0,0.0,0.0,0.0030175015087507,0.0,1.0
+SJBALL030871,B-cell acute lymphoblastic leukemia,iAMP21,0.0,0.0,0.0,0.0618062946632203,0.0,1.0
+SJBALL030923,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,0.0,0.0,0.0,0.0083278203681363,0.0,1.0
+SJBALL030971,B-cell acute lymphoblastic leukemia,ZNF384-R,0.0,0.0,0.0,0.0246289349208938,0.0,1.0
+SJBALL030975,B-cell acute lymphoblastic leukemia,DUX4-R Type 1,0.0,0.0,0.0,0.0191883005349168,0.0,1.0
+SJBALL031052,B-cell acute lymphoblastic leukemia,Near-haploid,0.0,0.0,0.0,0.0172176308539944,0.0,1.0
+SJBALL031087,B-cell acute lymphoblastic leukemia,KMT2A-R,0.0,0.0,0.0,0.0220855024451806,0.0,1.0
+SJBALL031128,B-cell acute lymphoblastic leukemia,BCR::ABL1,0.0,0.0,0.0,0.0066728608835205,0.0,1.0
+SJBALL031144,B-cell acute lymphoblastic leukemia,Hyperdiploid,0.0,0.0,0.0,0.136540828887977,0.0,1.0
+SJBALL031168,B-cell acute lymphoblastic leukemia,Hyperdiploid,0.0,0.0,0.0,0.0043338986244582,0.0,1.0
+SJBALL031267,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,0.0,0.0,0.0,0.0339167005833672,0.0,1.0
+SJBALL031281,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,0.0,0.0,0.0,0.0576350213702888,0.0,1.0
+SJBALL081,B-cell acute lymphoblastic leukemia,MEF2D-R,0.0,0.0,0.0,0.0070845664066003,0.0,1.0
+SJBALL087,B-cell acute lymphoblastic leukemia,ZNF384-R,0.0,0.0,0.0,0.0768376226624699,0.0,0.9999999999999998
+SJBALL104,B-cell acute lymphoblastic leukemia,MEF2D-R,0.0,0.0,0.0,0.0089544601739723,0.0,1.0
+SJBALL113,B-cell acute lymphoblastic leukemia,Other,0.0,0.0,0.0,0.0194111516414799,0.0,1.0
+SJBALL182,B-cell acute lymphoblastic leukemia,ZNF384-R,0.0,0.0,0.0,0.03372771024938745,0.0,1.0
+SJBALL211,B-cell acute lymphoblastic leukemia,MEF2D-R,0.0,0.0,0.0,0.013796810607418,0.0,1.0
+SJBALL243,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,0.0,0.0,0.0,0.0263504611330698,0.0,1.0
+SJBALL255,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,0.0,0.0,0.0,0.0509177482528223,0.0,1.0
+SJE2A063,B-cell acute lymphoblastic leukemia,TCF3::PBX1,0.0,0.0,0.0,0.0137238647876945,0.0,1.0
+SJE2A066,B-cell acute lymphoblastic leukemia,TCF3::PBX1,0.0,0.0,0.0,0.0304824774293757,0.0,1.0
+SJE2A067,B-cell acute lymphoblastic leukemia,TCF3::PBX1,0.0,0.0,0.0,0.0130808521240812,0.0,1.0
+SJHYPER022017,B-cell acute lymphoblastic leukemia,Hyperdiploid,0.0,0.0,0.0,0.0088928985694032,0.0,1.0
+SJHYPO021982,B-cell acute lymphoblastic leukemia,PAX5alt,0.0,0.0,0.0,0.0090040281178421,0.0,1.0000000000000002
+SJHYPO117,B-cell acute lymphoblastic leukemia,Near-haploid,0.0,0.0,0.0,0.0430128645782186,0.0,1.0
+SJHYPO120,B-cell acute lymphoblastic leukemia,Low-hypodiploid,0.0,0.0,0.0,0.0346133751306165,0.0,1.0
+SJHYPO123,B-cell acute lymphoblastic leukemia,Near-haploid,0.0,0.0,0.0,0.0,0.0,1.0
+SJHYPO124,B-cell acute lymphoblastic leukemia,Near-haploid,0.0,0.0,0.0,0.0087847042796072,0.0,1.0
+SJHYPO143,B-cell acute lymphoblastic leukemia,Near-haploid,0.0,0.0,0.0,0.0055332164827989,0.0,1.0
+SJHYPO146,B-cell acute lymphoblastic leukemia,Near-haploid,0.0,0.0,0.0,0.1191302027748132,0.0,1.0
+SJINF022043,B-cell acute lymphoblastic leukemia,KMT2A-R,0.0,0.0,0.0,0.024748138414367,0.0,1.0
+SJMLL006,B-cell acute lymphoblastic leukemia,KMT2A-R,0.0,0.0,0.0,0.0,0.0,1.0
+SJMLL009,B-cell acute lymphoblastic leukemia,KMT2A-R,0.0,0.0,0.0,0.033129219657717,0.0,1.0
+SJMPAL003414,Mixed phenotype acute leukemia,"T/M, TLX3 subtype",0.0,0.0,0.0,0.0,0.0,1.0
+SJMPAL011913,Mixed phenotype acute leukemia,"T/M, BCL11B-R",0.0,0.0,0.0,0.0,0.0,1.0
+SJPHALL004,B-cell acute lymphoblastic leukemia,BCR::ABL1,0.0,0.0,0.0,0.0119476774127098,0.0,1.0
+SJPHALL006,B-cell acute lymphoblastic leukemia,BCR::ABL1,0.0,0.0,0.0,0.0084166228300894,0.0,1.0
+SJPHALL007,B-cell acute lymphoblastic leukemia,BCR::ABL1,0.0,0.0,0.0,0.0079237174321783,0.0,1.0
+SJPHALL010,B-cell acute lymphoblastic leukemia,BCR::ABL1,0.0,0.0,0.0,0.0043705544605364,0.0,1.0
+SJPHALL020,B-cell acute lymphoblastic leukemia,BCR::ABL1,0.0,0.0,0.0,0.02556978429250745,0.0,1.0
+SJPHALL021,B-cell acute lymphoblastic leukemia,BCR::ABL1,0.0,0.0,0.0,0.0087327954437589,0.0,1.0
+SJTALL005006,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,0.0,0.0,0.0,0.0,0.0,1.0
+SJTALL030212,T-cell acute lymphoblastic leukemia,KMT2A-R,0.0,0.0,0.0,0.0,0.0,1.0
+TB-000001,B-cell acute lymphoblastic leukemia,NOS,0.0020380434782608,0.0006793478260869,0.0,0.0006793478260869,0.0,0.0373641304347823
+TB-000004,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,0.0,0.0266666666666666,0.0,0.0,0.0,0.8933333333333331
+TB-000005,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,0.0179910044977508,0.0,0.0014992503748125,0.0044977511244377,0.0,0.1709145427286349
+TB-000012,T-cell acute lymphoblastic leukemia,,0.035249792175055396,0.021627202274007,0.02043388485157275,0.00860127108417575,0.0,0.11817864900378025
+TB-000013,T-cell acute lymphoblastic leukemia,,0.0102529057618233,0.005793450881612,0.00604534005037775,0.00904316002304275,0.0002518891687657,0.04054342546678515
+TB-000018,B-cell acute lymphoblastic leukemia,ETV6::RUNX1; t(12;21)(p13.2;q22.1),0.0257654171704956,0.00060459492140265,0.00060459492140265,0.00483675937122125,0.0,0.060648125755743354
+TB-000019,Acute myeloid leukemia,KMT2A::MLLT3; t(9;11)(p21.3;q23.3),0.4871794871794869,0.0,0.0256410256410256,0.0,0.0,0.5384615384615379
+TB-000023,B-cell acute lymphoblastic leukemia,ETV6::RUNX1; t(12;21)(p13.2;q22.1),0.0196078431372549,0.196078431372549,0.0,0.0196078431372549,0.0,0.7254901960784315
+TB-000025,B-cell acute lymphoblastic leukemia,ETV6::RUNX1; t(12;21)(p13.2;q22.1),0.0414937759336095,0.0082987551867219,0.0,0.0041493775933609,0.0,0.3983402489626545
+TB-000026,B-cell acute lymphoblastic leukemia,TCF3::PBX1; t(1;19)(q23;p13.3),0.0217391304347826,0.217391304347826,0.0652173913043478,0.0,0.0,0.6956521739130432
+TB-000027,B-cell acute lymphoblastic leukemia,ETV6::RUNX1; t(12;21)(p13.2;q22.1),0.0282776349614393,0.0077120822622106,0.0077120822622105,0.0051413881748071,0.0,0.2467866323907444
+TB-000038,B-cell acute lymphoblastic leukemia,ETV6::RUNX1; t(12;21)(p13.2;q22.1),0.0189873417721518,0.0,0.0,0.0,0.0,0.1075949367088604
+TB-000042,B-cell acute lymphoblastic leukemia,ETV6::RUNX1; t(12;21)(p13.2;q22.1),0.0062402496099842,0.0,0.000780031201248,0.0046801872074883,0.0,0.0514820592823709
+TB-000048,B-cell acute lymphoblastic leukemia,ETV6::RUNX1; t(12;21)(p13.2;q22.1),0.0224238030398301,0.11808165102737705,0.0012126147264721,0.01676444357783665,0.0,0.29602341542188054
+TB-000049,B-cell acute lymphoblastic leukemia,hyperdiploid,0.0479452054794518,0.0205479452054792,0.0,0.0068493150684931,0.0,0.1232876712328758
+TB-000052,Acute myeloid leukemia,NOS,0.0265392781316342,0.0233545647558384,0.0159235668789807,0.0,0.0,0.2383227176220791
+TB-000053,B-cell acute lymphoblastic leukemia,hyperdiploid,0.0350569675723048,0.0096406660823835,0.0008764241893076,0.0008764241893076,0.0,0.5635407537248021
+TB-000054,B-cell acute lymphoblastic leukemia,ETV6::RUNX1; t(12;21)(p13.2;q22.1),0.0286225402504471,0.0011926058437686,0.0005963029218843,0.0005963029218843,0.0,0.2170542635658909
+TB-000055,B-cell acute lymphoblastic leukemia,BCR::ABL1; t(9;22)(q34.1;q11.2),0.0040507240659533,0.0013674859643876,0.00045582865479585,0.0005905269306579,0.0,0.03740571985803755
+TB-000065,Acute myeloid leukemia,NOS,0.1656151419558356,0.0504731861198736,0.0362776025236591,0.0126182965299684,0.000788643533123,0.944006309148264
