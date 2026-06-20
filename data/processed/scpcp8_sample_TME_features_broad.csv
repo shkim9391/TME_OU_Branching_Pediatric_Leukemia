@@ -1,0 +1,99 @@
+,participant_id,diagnosis,subdiagnosis,tissue_location,disease_timing,frac_T,frac_B,frac_myeloid,frac_NK,frac_stromal,frac_known
+SCPCS000124,SJTALL005006,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.0,0.0,1.0
+SCPCS000125,SJALL067628,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,Peripheral blood,Initial diagnosis,0.0,0.0,0.0,0.0,0.0,1.0
+SCPCS000126,SJALL067630,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,Peripheral blood,Initial diagnosis,0.0,0.0,0.0,0.0,0.0,1.0
+SCPCS000127,SJALL067672,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.0,0.0,1.0
+SCPCS000128,SJALL067673,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.0,0.0,1.0
+SCPCS000212,SJBALL030216,B-cell acute lymphoblastic leukemia,PAX5alt,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.027848707309288224,0.0,1.0
+SCPCS000213,SJBALL081,B-cell acute lymphoblastic leukemia,MEF2D-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.007084566406600305,0.0,0.9999999999999999
+SCPCS000214,SJBALL104,B-cell acute lymphoblastic leukemia,MEF2D-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.008954460173972369,0.0,1.0
+SCPCS000215,SJHYPO021982,B-cell acute lymphoblastic leukemia,PAX5alt,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.009004028117842193,0.0,1.0000000000000002
+SCPCS000301,SJALL040053,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.03225806451612903,0.0,1.0
+SCPCS000302,SJALL040099,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.0030775543701272055,0.0,1.0
+SCPCS000303,SJBALL006,B-cell acute lymphoblastic leukemia,MEF2D-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.01956244011497924,0.0,1.0
+SCPCS000304,SJBALL182,B-cell acute lymphoblastic leukemia,ZNF384-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.005842375104328127,0.0,1.0
+SCPCS000305,SJBALL211,B-cell acute lymphoblastic leukemia,MEF2D-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.013796810607418025,0.0,1.0
+SCPCS000306,SJBALL004097,B-cell acute lymphoblastic leukemia,MEF2D-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.0426865671641791,0.0,1.0
+SCPCS000307,SJBALL021901,B-cell acute lymphoblastic leukemia,iAMP21,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.017696742190642177,0.0,1.0
+SCPCS000309,SJBALL021947,B-cell acute lymphoblastic leukemia,PAX5alt,Peripheral blood,Initial diagnosis,0.0,0.0,0.0,0.12003573458945829,0.0,1.0
+SCPCS000311,SJBALL022052,B-cell acute lymphoblastic leukemia,ETV6::RUNX1-like,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.04001798561151079,0.0,1.0
+SCPCS000312,SJBALL030059,B-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.013167640523413711,0.0,0.9999999999999999
+SCPCS000313,SJBALL030095,B-cell acute lymphoblastic leukemia,PAX5alt,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.036049568156214795,0.0,1.0
+SCPCS000314,SJBALL030247,B-cell acute lymphoblastic leukemia,ETV6::RUNX1-like,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.042673633790550836,0.0,1.0
+SCPCS000315,SJBALL030370,B-cell acute lymphoblastic leukemia,iAMP21,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.015817530367910514,0.0,1.0
+SCPCS000316,SJBALL030379,B-cell acute lymphoblastic leukemia,DUX4-R Type 1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.014452332657200811,0.0,1.0
+SCPCS000317,SJBALL030434,B-cell acute lymphoblastic leukemia,iAMP21,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.007637752318603383,0.0,1.0
+SCPCS000318,SJBALL030662,B-cell acute lymphoblastic leukemia,ETV6::RUNX1-like,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.018023394604917642,0.0,1.0
+SCPCS000319,SJBALL030762,B-cell acute lymphoblastic leukemia,DUX4-R Type 1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.03210422240316389,0.0,1.0
+SCPCS000320,SJBALL030871,B-cell acute lymphoblastic leukemia,iAMP21,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.06180629466322032,0.0,1.0
+SCPCS000321,SJBALL031052,B-cell acute lymphoblastic leukemia,Near-haploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.01721763085399449,0.0,0.9999999999999999
+SCPCS000322,SJBALL031128,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.0066728608835205675,0.0,0.9999999999999999
+SCPCS000323,SJE2A063,B-cell acute lymphoblastic leukemia,TCF3::PBX1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.013723864787694575,0.0,1.0
+SCPCS000324,SJE2A067,B-cell acute lymphoblastic leukemia,TCF3::PBX1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.013080852124081227,0.0,1.0
+SCPCS000325,SJHYPO124,B-cell acute lymphoblastic leukemia,Near-haploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.008784704279607272,0.0,1.0
+SCPCS000326,SJMLL006,B-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.0,0.0,1.0
+SCPCS000327,SJPHALL004,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.011947677412709856,0.0,0.9999999999999999
+SCPCS000328,SJPHALL021,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.0087327954437589,0.0,1.0
+SCPCS000329,SJALL040119,B-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.007831437628193175,0.0,1.0
+SCPCS000330,SJALL040137,B-cell acute lymphoblastic leukemia,ETV6::RUNX1-like,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.02467326964777589,0.0,1.0
+SCPCS000331,SJBALL087,B-cell acute lymphoblastic leukemia,ZNF384-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.0768376226624699,0.0,0.9999999999999998
+SCPCS000332,SJBALL014876,B-cell acute lymphoblastic leukemia,Near-haploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.024486226497595104,0.0,1.0
+SCPCS000333,SJBALL021968,B-cell acute lymphoblastic leukemia,ZNF384-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.020012082766953633,0.0,1.0
+SCPCS000334,SJBALL021973,B-cell acute lymphoblastic leukemia,ZNF384-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.01392127764822274,0.0,1.0
+SCPCS000335,SJBALL022020,B-cell acute lymphoblastic leukemia,PAX5alt,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.016158818097876268,0.0,0.9999999999999999
+SCPCS000336,SJBALL030036,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.07162800687285223,0.0,0.9999999999999999
+SCPCS000337,SJBALL030040,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.007862639024226337,0.0,1.0
+SCPCS000338,SJBALL030072,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.02593158699204132,0.0,1.0
+SCPCS000339,SJBALL030090,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.012903902643726395,0.0,0.9999999999999999
+SCPCS000340,SJBALL030127,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.02718717323109097,0.0,1.0
+SCPCS000341,SJBALL030145,B-cell acute lymphoblastic leukemia,DUX4-R Type 1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.06768953068592058,0.0,0.9999999999999999
+SCPCS000342,SJBALL030821,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.0030175015087507543,0.0,1.0
+SCPCS000343,SJBALL030971,B-cell acute lymphoblastic leukemia,ZNF384-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.024628934920893818,0.0,1.0
+SCPCS000344,SJBALL031144,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.13654082888797703,0.0,1.0
+SCPCS000345,SJBALL031281,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.05763502137028882,0.0,1.0
+SCPCS000346,SJPHALL006,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.008416622830089426,0.0,1.0
+SCPCS000347,SJPHALL007,B-cell acute lymphoblastic leukemia,BCR::ABL1,Peripheral blood,Initial diagnosis,0.0,0.0,0.0,0.00792371743217835,0.0,0.9999999999999999
+SCPCS000348,SJPHALL010,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.0043705544605364645,0.0,1.0
+SCPCS000349,SJALL040066,B-cell acute lymphoblastic leukemia,TCF3::PBX1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.02978584628763996,0.0,1.0
+SCPCS000350,SJALL040070,B-cell acute lymphoblastic leukemia,TCF3::PBX1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.020647064245552585,0.0,1.0
+SCPCS000351,SJBALL006,B-cell acute lymphoblastic leukemia,MEF2D-R,Bone marrow,Recurrence,0.0,0.0,0.0,0.01964649451343715,0.0,1.0
+SCPCS000352,SJBALL243,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.026350461133069828,0.0,0.9999999999999999
+SCPCS000353,SJBALL255,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.050917748252822366,0.0,1.0
+SCPCS000354,SJBALL021964,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.013076079005120702,0.0,1.0
+SCPCS000355,SJBALL030123,B-cell acute lymphoblastic leukemia,KMT2A-R,Peripheral blood,Initial diagnosis,0.0,0.0,0.0,0.11086900794668034,0.0,1.0
+SCPCS000356,SJBALL030254,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.050684715882260346,0.0,1.0
+SCPCS000357,SJBALL030276,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.013874689645100044,0.0,1.0
+SCPCS000358,SJBALL030285,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.022082344443297906,0.0,1.0
+SCPCS000359,SJBALL030313,B-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.019649997850109645,0.0,1.0
+SCPCS000360,SJBALL030344,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.03585369379788926,0.0,1.0
+SCPCS000361,SJBALL031087,B-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.02208550244518063,0.0,0.9999999999999999
+SCPCS000362,SJBALL031168,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.004333898624458263,0.0,0.9999999999999999
+SCPCS000363,SJBALL031267,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.03391670058336725,0.0,1.0
+SCPCS000364,SJE2A066,B-cell acute lymphoblastic leukemia,TCF3::PBX1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.03048247742937579,0.0,1.0
+SCPCS000365,SJHYPER022017,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.008892898569403274,0.0,1.0
+SCPCS000366,SJMLL009,B-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.03312921965771707,0.0,1.0
+SCPCS000367,SJMPAL011913,Mixed phenotype acute leukemia,"T/M, BCL11B-R",Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.0,0.0,1.0
+SCPCS000369,SJTALL030212,T-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.0,0.0,1.0
+SCPCS000370,SJBALL030734,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.012992618811240126,0.0,1.0
+SCPCS000371,SJBALL030923,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.008327820368136358,0.0,1.0
+SCPCS000372,SJBALL030975,B-cell acute lymphoblastic leukemia,DUX4-R Type 1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.019188300534916818,0.0,0.9999999999999999
+SCPCS000373,SJHYPO143,B-cell acute lymphoblastic leukemia,Near-haploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.005533216482798914,0.0,1.0
+SCPCS000374,SJPHALL020,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.022360135073469015,0.0,1.0000000000000002
+SCPCS000375,SJALL040137,B-cell acute lymphoblastic leukemia,ETV6::RUNX1-like,Bone marrow,Recurrence,0.0,0.0,0.0,0.031772784019975034,0.0,1.0
+SCPCS000376,SJBALL113,B-cell acute lymphoblastic leukemia,Other,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.019411151641479937,0.0,0.9999999999999999
+SCPCS000377,SJBALL030414,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.034407319013524264,0.0,1.0000000000000002
+SCPCS000378,SJBALL030491,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.029035380148403053,0.0,0.9999999999999999
+SCPCS000379,SJHYPO123,B-cell acute lymphoblastic leukemia,Near-haploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.0,0.0,1.0
+SCPCS000380,SJALL040100,B-cell acute lymphoblastic leukemia,Hyperdiploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.019256881866436242,0.0,1.0
+SCPCS000381,SJALL040103,B-cell acute lymphoblastic leukemia,DUX4-R Type 2,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.013943510904540579,0.0,0.9999999999999999
+SCPCS000382,SJBALL022035,B-cell acute lymphoblastic leukemia,ETV6::RUNX1-like,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.010108303249097473,0.0,1.0
+SCPCS000383,SJBALL030123,B-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Recurrence,0.0,0.0,0.0,0.004455869751499571,0.0,1.0
+SCPCS000384,SJBALL030718,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.004331159456364813,0.0,1.0
+SCPCS000385,SJINF022043,B-cell acute lymphoblastic leukemia,KMT2A-R,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.02474813841436706,0.0,1.0
+SCPCS000386,SJALL040069,B-cell acute lymphoblastic leukemia,BCR::ABL1-like,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.04329815563665056,0.0,1.0
+SCPCS000387,SJBALL182,B-cell acute lymphoblastic leukemia,ZNF384-R,Bone marrow,Recurrence,0.0,0.0,0.0,0.06161304539444689,0.0,1.0
+SCPCS000388,SJHYPO117,B-cell acute lymphoblastic leukemia,Near-haploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.0430128645782186,0.0,1.0
+SCPCS000389,SJHYPO120,B-cell acute lymphoblastic leukemia,Low-hypodiploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.03461337513061651,0.0,1.0
+SCPCS000390,SJHYPO146,B-cell acute lymphoblastic leukemia,Near-haploid,Bone marrow,Initial diagnosis,0.0,0.0,0.0,0.11913020277481323,0.0,1.0
+SCPCS000391,SJMPAL003414,Mixed phenotype acute leukemia,"T/M, TLX3 subtype",Peripheral blood,Initial diagnosis,0.0,0.0,0.0,0.0,0.0,1.0
+SCPCS000392,SJPHALL020,B-cell acute lymphoblastic leukemia,BCR::ABL1,Bone marrow,Recurrence,0.0,0.0,0.0,0.0287794335115459,0.0,1.0
