@@ -13,6 +13,30 @@ The revised analysis asks whether harmonized continuous immune composition
 contains longitudinal information beyond coarse ecological-context labels
 derived from the same cross-sectional single-cell data.
 
+## Archived Release
+
+The revised manuscript analysis and associated reproducibility materials are
+archived in Zenodo as:
+
+> **v1.3.2 — Revised Continuous-Ecology OU Analysis and Reproducibility Release**
+
+**Version DOI:**  
+[https://doi.org/10.5281/zenodo.22033731](https://doi.org/10.5281/zenodo.22033731)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22033731.svg)](https://doi.org/10.5281/zenodo.22033731)
+
+### Citation
+
+Kim, S.-H. (2026). *shkim9391/TME_OU_Branching_Pediatric_Leukemia:
+v1.3.2 — Revised Continuous-Ecology OU Analysis and Reproducibility Release*
+(Version v1.3.2) [Computer software]. Zenodo.
+https://doi.org/10.5281/zenodo.22033731
+
+This version-specific DOI identifies the archived repository release
+corresponding to the revised continuous-ecology OU analysis. When reproducing
+or referring specifically to the analyses reported in the revised manuscript,
+please use this archived version.
+
 ## Overview
 
 Single-cell pediatric leukemia datasets contain substantial variation in
@@ -52,7 +76,3 @@ The longitudinal analysis uses the previously curated:
 
 ```text
 kmt2a_longitudinal_clean.xlsx
-
-## DOI
-
-Processed TME composition datasets, annotation-mapping and quality-control audits, participant reconciliation and ecological-context assignments, longitudinal model-input and design tables, posterior summaries and model diagnostics, participant-level leave-one-participant-out validation results, transformed-trait and secondary-endpoint sensitivity analyses, prior-sensitivity outputs, simulation-based parameter-recovery results, posterior-predictive calibration summaries, and figure-generation source data are provided in the Supplementary Materials and archived in Zenodo (Version v1.3.2): doi:10.5281/zenodo.22033731.
