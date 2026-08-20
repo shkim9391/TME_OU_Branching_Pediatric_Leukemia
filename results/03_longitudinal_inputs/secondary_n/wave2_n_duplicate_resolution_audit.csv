@@ -1,0 +1,16 @@
+Patient_ID,t,original_values,resolved_value,resolution_rule,n_rows_original
+P100,0.0,0|0,0,collapsed_exact_duplicates,2
+P127,0.0,0|0,0,collapsed_exact_duplicates,2
+P133,0.0,0|0,0,collapsed_exact_duplicates,2
+P135,0.0,0|0|0,0,collapsed_exact_duplicates,3
+P136,0.0,0|0|0,0,collapsed_exact_duplicates,3
+P137,0.0,0|0,0,collapsed_exact_duplicates,2
+P138,0.0,0|0,0,collapsed_exact_duplicates,2
+P3,0.0,0|0,0,collapsed_exact_duplicates,2
+P47,0.0,0|0,0,collapsed_exact_duplicates,2
+P63,0.246406571,0|0,0,collapsed_exact_duplicates,2
+P68,0.0,0|0,0,collapsed_exact_duplicates,2
+P70,0.0,0|0,0,collapsed_exact_duplicates,2
+P77,0.060232717,1|1,1,collapsed_exact_duplicates,2
+P95,0.0,0|0,0,collapsed_exact_duplicates,2
+P99,0.0,0|0,0,collapsed_exact_duplicates,2
