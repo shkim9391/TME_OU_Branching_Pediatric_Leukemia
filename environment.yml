@@ -1,0 +1,49 @@
+name: tme_ou_pymc
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.11
+
+  # Core scientific stack
+  - numpy=2.4.*
+  - pandas>=2.2,<3
+  - scipy>=1.15,<2
+  - scikit-learn=1.9.*
+  - matplotlib>=3.9
+  - seaborn>=0.13
+
+  # Single-cell
+  - anndata>=0.10
+  - scanpy>=1.10
+  - h5py>=3.11
+
+  # Dimensionality reduction
+  - umap-learn=0.5.12
+  - numba=0.65.*
+  - pynndescent>=0.5
+
+  # Bayesian inference
+  - pymc=5.24.*
+  - arviz>=0.20
+  - pytensor
+  - xarray
+  - netcdf4
+  - h5netcdf
+
+  # Data I/O
+  - openpyxl>=3.1
+  - pyarrow
+
+  # Utilities
+  - tqdm
+  - joblib
+  - packaging
+  - pyyaml
+  - python-dateutil
+
+  # Interactive / reproducibility
+  - jupyterlab
+  - ipykernel
+  - pip
