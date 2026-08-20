@@ -1,0 +1,10 @@
+participant_id,Patient_ID,project,diagnosis,subdiagnosis,primary_total_raw,eligible_primary,in_previous_100
+SJALL067628,,SCPCP000008,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,0.0,False,False
+SJALL067630,,SCPCP000008,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,0.0,False,False
+SJALL067672,P10,SCPCP000008,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,0.0,False,True
+SJALL067673,P11,SCPCP000008,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,0.0,False,True
+SJHYPO123,P73,SCPCP000008,B-ALL,Near-haploid,0.0,False,True
+SJMPAL003414,,SCPCP000008,Mixed phenotype acute leukemia,"T/M, TLX3 subtype",0.0,False,False
+SJMPAL011913,P80,SCPCP000008,Mixed phenotype acute leukemia,"T/M, BCL11B-R",0.0,False,True
+SJTALL005006,P86,SCPCP000008,Early T-cell precursor T-cell acute lymphoblastic leukemia,BCL11B-R,0.0,False,True
+SJTALL030212,P87,SCPCP000008,T-cell acute lymphoblastic leukemia,KMT2A-R,0.0,False,True
