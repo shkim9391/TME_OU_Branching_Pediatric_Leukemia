@@ -1,0 +1,2 @@
+n_supported_participants,n_x_observations,n_x_transitions,median_unique_times_per_participant,min_unique_times_per_participant,max_unique_times_per_participant,median_followup_years,min_followup_years,max_followup_years,median_interval_cv,median_dt,q25_dt,q75_dt,q90_dt,q95_dt,max_dt
+34,241,207,6.0,2,18,1.2826830935,0.328542094,6.535249828,0.9470268599157042,0.09308692700000004,0.0465434635,0.21765913800000009,0.6997946608000001,1.1704312114999984,3.211498973

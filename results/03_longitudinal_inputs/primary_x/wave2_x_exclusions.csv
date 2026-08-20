@@ -1,0 +1,71 @@
+participant_id,Patient_ID,reason
+SJBALL021947,,No legacy P1-P100 mapping
+SJBALL030123,,No legacy P1-P100 mapping
+SJPHALL007,,No legacy P1-P100 mapping
+TB-000004,,No legacy P1-P100 mapping
+TB-000026,,No legacy P1-P100 mapping
+TB-000027,,No legacy P1-P100 mapping
+TB-000042,,No legacy P1-P100 mapping
+TB-000049,,No legacy P1-P100 mapping
+TB-000052,,No legacy P1-P100 mapping
+TB-000055,,No legacy P1-P100 mapping
+SJALL040070,P4,No x-series observation
+SJALL040099,P5,No x-series observation
+SJALL040100,P6,No x-series observation
+SJALL040137,P9,No x-series observation
+SJBALL006,P13,No x-series observation
+SJBALL014876,P14,No x-series observation
+SJBALL021973,P18,No x-series observation
+SJBALL022035,P20,No x-series observation
+SJBALL022052,P21,No x-series observation
+SJBALL030072,P25,No x-series observation
+SJBALL030247,P31,No x-series observation
+SJBALL030276,P33,No x-series observation
+SJBALL030285,P34,No x-series observation
+SJBALL030313,P35,No x-series observation
+SJBALL030344,P36,No x-series observation
+SJBALL030370,P37,No x-series observation
+SJBALL030379,P38,No x-series observation
+SJBALL030414,P39,No x-series observation
+SJBALL030434,P40,No x-series observation
+SJBALL030491,P41,No x-series observation
+SJBALL030662,P42,No x-series observation
+SJBALL030718,P43,No x-series observation
+SJBALL030734,P44,No x-series observation
+SJBALL030762,P45,No x-series observation
+SJBALL030821,P46,No x-series observation
+SJBALL030923,P48,No x-series observation
+SJBALL030971,P49,No x-series observation
+SJBALL030975,P50,No x-series observation
+SJBALL031052,P51,No x-series observation
+SJBALL031087,P52,No x-series observation
+SJBALL031128,P53,No x-series observation
+SJBALL031144,P54,No x-series observation
+SJBALL031168,P55,No x-series observation
+SJBALL104,P60,No x-series observation
+SJBALL113,P61,No x-series observation
+SJBALL182,P62,No x-series observation
+SJBALL243,P64,No x-series observation
+SJBALL255,P65,No x-series observation
+SJE2A063,P66,No x-series observation
+SJE2A066,P67,No x-series observation
+SJHYPO117,P71,No x-series observation
+SJHYPO120,P72,No x-series observation
+SJHYPO124,P74,No x-series observation
+SJHYPO143,P75,No x-series observation
+SJHYPO146,P76,No x-series observation
+SJMLL006,P78,No x-series observation
+SJMLL009,P79,No x-series observation
+SJPHALL004,P81,No x-series observation
+SJPHALL006,P82,No x-series observation
+SJPHALL020,P84,No x-series observation
+SJPHALL021,P85,No x-series observation
+TB-000001,P88,No x-series observation
+TB-000012,P90,No x-series observation
+TB-000013,P91,No x-series observation
+TB-000018,P92,No x-series observation
+TB-000019,P93,No x-series observation
+TB-000023,P94,No x-series observation
+TB-000038,P96,No x-series observation
+TB-000048,P97,No x-series observation
+TB-000053,P98,No x-series observation
