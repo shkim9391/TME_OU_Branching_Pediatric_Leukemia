@@ -52,3 +52,7 @@ The longitudinal analysis uses the previously curated:
 
 ```text
 kmt2a_longitudinal_clean.xlsx
+
+## DOI
+
+Processed TME composition datasets, annotation-mapping and quality-control audits, participant reconciliation and ecological-context assignments, longitudinal model-input and design tables, posterior summaries and model diagnostics, participant-level leave-one-participant-out validation results, transformed-trait and secondary-endpoint sensitivity analyses, prior-sensitivity outputs, simulation-based parameter-recovery results, posterior-predictive calibration summaries, and figure-generation source data are provided in the Supplementary Materials and archived in Zenodo (Version v1.3.2): doi:10.5281/zenodo.22033731.
