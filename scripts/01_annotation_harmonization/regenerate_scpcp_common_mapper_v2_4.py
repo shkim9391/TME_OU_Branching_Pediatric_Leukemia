@@ -338,7 +338,7 @@ def main() -> None:
     ap.add_argument(
         "--root",
         type=Path,
-        default=Path("/Users/seung-hwan.kim/Desktop/TME_OU_Branching"),
+        default=Path("/TME_OU_Branching"),
         help="TME_OU_Branching project root",
     )
     ap.add_argument(
