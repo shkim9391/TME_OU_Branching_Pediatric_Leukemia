@@ -1,0 +1,38 @@
+project,annotation_column,original_annotation,broad_class,cell_count,fraction_within_project
+SCPCP000022,consensus_celltype_annotation,B cell,B,420,0.01592900216179315
+SCPCP000022,consensus_celltype_annotation,"B cell, CD19-positive",B,1,3.792619562331703e-05
+SCPCP000022,consensus_celltype_annotation,"CD4-positive, alpha-beta T cell",TNK,250,0.009481548905829256
+SCPCP000022,consensus_celltype_annotation,"CD4-positive, alpha-beta memory T cell",TNK,3,0.00011377858686995108
+SCPCP000022,consensus_celltype_annotation,"CD8-positive, alpha-beta T cell",TNK,249,0.00944362271020594
+SCPCP000022,consensus_celltype_annotation,"CD8-positive, alpha-beta memory T cell",TNK,4,0.0001517047824932681
+SCPCP000022,consensus_celltype_annotation,T cell,TNK,27,0.0010240072818295596
+SCPCP000022,consensus_celltype_annotation,Unknown,Unknown,21699,0.8229605188303561
+SCPCP000022,consensus_celltype_annotation,alpha-beta T cell,TNK,2,7.585239124663405e-05
+SCPCP000022,consensus_celltype_annotation,antibody secreting cell,B,1,3.792619562331703e-05
+SCPCP000022,consensus_celltype_annotation,common lymphoid progenitor,Progenitor,894,0.03390601888724542
+SCPCP000022,consensus_celltype_annotation,dendritic cell,Myeloid,7,0.00026548336936321916
+SCPCP000022,consensus_celltype_annotation,erythrocyte,Erythroid,757,0.02871013008685099
+SCPCP000022,consensus_celltype_annotation,erythroid lineage cell,Erythroid,419,0.015891075966169833
+SCPCP000022,consensus_celltype_annotation,fibroblast,Blast_Malignant,1,3.792619562331703e-05
+SCPCP000022,consensus_celltype_annotation,granulocyte,Myeloid,1,3.792619562331703e-05
+SCPCP000022,consensus_celltype_annotation,hematopoietic oligopotent progenitor cell,Progenitor,60,0.0022755717373990213
+SCPCP000022,consensus_celltype_annotation,hematopoietic precursor cell,Progenitor,983,0.037281450297720634
+SCPCP000022,consensus_celltype_annotation,hematopoietic stem cell,Progenitor,63,0.0023893503242689725
+SCPCP000022,consensus_celltype_annotation,lymphocyte of B lineage,B,19,0.0007205977168430234
+SCPCP000022,consensus_celltype_annotation,macrophage,Myeloid,1,3.792619562331703e-05
+SCPCP000022,consensus_celltype_annotation,mature B cell,B,17,0.0006447453255963894
+SCPCP000022,consensus_celltype_annotation,mature NK T cell,TNK,1,3.792619562331703e-05
+SCPCP000022,consensus_celltype_annotation,mature T cell,TNK,32,0.0012136382599461449
+SCPCP000022,consensus_celltype_annotation,mature alpha-beta T cell,TNK,50,0.0018963097811658513
+SCPCP000022,consensus_celltype_annotation,megakaryocyte,Other,14,0.0005309667387264383
+SCPCP000022,consensus_celltype_annotation,memory B cell,B,8,0.0003034095649865362
+SCPCP000022,consensus_celltype_annotation,memory T cell,TNK,22,0.0008343763037129745
+SCPCP000022,consensus_celltype_annotation,monocyte,Myeloid,110,0.004171881518564873
+SCPCP000022,consensus_celltype_annotation,mononuclear phagocyte,Myeloid,6,0.00022755717373990216
+SCPCP000022,consensus_celltype_annotation,myeloid leukocyte,Myeloid,9,0.0003413357606098532
+SCPCP000022,consensus_celltype_annotation,naive B cell,B,36,0.0013653430424394129
+SCPCP000022,consensus_celltype_annotation,natural killer cell,TNK,161,0.006106117495354041
+SCPCP000022,consensus_celltype_annotation,plasma cell,B,30,0.0011377858686995106
+SCPCP000022,consensus_celltype_annotation,plasmacytoid dendritic cell,B,7,0.00026548336936321916
+SCPCP000022,consensus_celltype_annotation,platelet,Stromal,1,3.792619562331703e-05
+SCPCP000022,consensus_celltype_annotation,regulatory T cell,TNK,2,7.585239124663405e-05

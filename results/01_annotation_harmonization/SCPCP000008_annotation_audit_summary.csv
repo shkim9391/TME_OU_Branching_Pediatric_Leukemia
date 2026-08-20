@@ -1,0 +1,10 @@
+project,annotation_column,original_annotation,broad_class,cell_count,fraction_within_project
+SCPCP000008,submitter_celltype_annotation,B,B,11013,0.009384682507490362
+SCPCP000008,submitter_celltype_annotation,Blast,Blast_Malignant,424868,0.36204951308384775
+SCPCP000008,submitter_celltype_annotation,DC,Myeloid,1242,0.0010583651751841488
+SCPCP000008,submitter_celltype_annotation,Erythroid,Erythroid,17267,0.014714002801855633
+SCPCP000008,submitter_celltype_annotation,HSC/MPP and pro.,Progenitor,2439,0.002078383786050031
+SCPCP000008,submitter_celltype_annotation,Monocyte,Myeloid,4798,0.004088595902200922
+SCPCP000008,submitter_celltype_annotation,Plasmablast,B,184,0.00015679484076802202
+SCPCP000008,submitter_celltype_annotation,Submitter-excluded,Excluded,684580,0.5833620222444159
+SCPCP000008,submitter_celltype_annotation,T_NK,TNK,27117,0.023107639658187247
