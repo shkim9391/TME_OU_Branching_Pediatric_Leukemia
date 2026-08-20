@@ -1,0 +1,8 @@
+model,active_predictors,n_predictors
+M_0,None,0
+M_B,B_z,1
+M_M,Myeloid_z,1
+M_E,B_z|Myeloid_z,2
+M_C,Context_z,1
+M_EC,B_z|Myeloid_z|Context_z,3
+M_S,ShuffledContext_z,1
