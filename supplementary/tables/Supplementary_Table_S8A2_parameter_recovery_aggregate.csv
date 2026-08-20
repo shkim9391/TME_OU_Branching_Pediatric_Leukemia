@@ -1,0 +1,5 @@
+scenario_display,model,n_parameters,mean_abs_bias,mean_rmse,mean_coverage_95,max_mean_divergences,n_replicates_per_parameter
+Unlabeled source scenario (zero ecological coefficients),M_0,3,0.09974648681110126,0.1372973045514718,0.9333333333333332,0.0,5
+Unlabeled source scenario (zero ecological coefficients),M_E,7,0.03559101876547712,0.09034824471344671,0.9714285714285714,0.0,5
+moderate_directional,M_0,3,0.041856941811474035,0.07157909589680862,1.0,0.0,5
+moderate_directional,M_E,7,0.04850058093249276,0.10053127704949404,0.9714285714285714,0.0,5

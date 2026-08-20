@@ -1,0 +1,23 @@
+Analysis stage,Characteristic,Overall,SCPCP000008,SCPCP000022,Definition / notes
+Cohort reconciliation,Regenerated common-mapper participants,113,93,20,Participants represented after common cell-type mapping across the two ScPCA projects.
+Cohort reconciliation,Mapped to previous P1–P100 cohort,100,87,13,Corrected legacy-ID reconciliation from cohort_reconciliation_fixed.csv.
+Cohort reconciliation,Eligible TNK/B/Myeloid primary simplex,104,84,20,Participants with an eligible primary TNK/B/Myeloid composition.
+Cohort reconciliation,Eligible primary simplex and previous P1–P100 cohort,94,81,13,Intersection used to reconcile the regenerated composition cohort with the legacy P1–P100 cohort.
+Cohort reconciliation,Eligible B-ALL primary simplex,99,84,15,B-ALL subset satisfying the primary-simplex eligibility criterion.
+Cohort reconciliation,Eligible B-ALL primary simplex and previous P1–P100 cohort,90,81,9,B-ALL intersection after corrected participant-ID reconciliation.
+Regenerated cohort diagnosis,B-ALL,100,85,15,Diagnosis recorded in cohort_reconciliation_fixed.csv.
+Regenerated cohort diagnosis,T-cell acute lymphoblastic leukemia,3,1,2,Diagnosis recorded in cohort_reconciliation_fixed.csv.
+Regenerated cohort diagnosis,Early T-cell precursor T-cell acute lymphoblastic leukemia,5,5,0,Diagnosis recorded in cohort_reconciliation_fixed.csv.
+Regenerated cohort diagnosis,Acute myeloid leukemia,3,0,3,Diagnosis recorded in cohort_reconciliation_fixed.csv.
+Regenerated cohort diagnosis,Mixed phenotype acute leukemia,2,2,0,Diagnosis recorded in cohort_reconciliation_fixed.csv.
+Wave 2 longitudinal modeling cohort,Participants,34,30,4,Participants contributing longitudinal observations to the Wave 2 models.
+Wave 2 longitudinal modeling cohort,B-ALL participants,33,30,3,Broad diagnosis label in the longitudinal model input.
+Wave 2 longitudinal modeling cohort,AML participants,1,0,1,Broad diagnosis label in the longitudinal model input.
+Wave 2 sampling,Total longitudinal observations,241,230,11,Observation counts are identical to unique-time counts in the supplied participant summary.
+Wave 2 sampling,Total unique time points,241,230,11,No duplicate times remain in the supplied Wave 2 participant summary.
+Wave 2 sampling,Total modeled transitions,207,200,7,Number of consecutive within-participant transitions.
+Wave 2 sampling,"Observations per participant, median [IQR]",6.0 [5.0–10.0],7.0 [5.0–10.0],2.0 [2.0–3.5],Participant-level number of longitudinal observations.
+Wave 2 sampling,"Observations per participant, range",2–18,2–18,2–5,Minimum–maximum across participants.
+Wave 2 sampling,"Follow-up, years, median [IQR]",1.283 [0.920–2.015],1.328 [0.862–2.015],1.198 [1.054–1.922],Participant-specific last minus first observation time.
+Wave 2 sampling,"Follow-up, years, range",0.329–6.535,0.329–6.535,1.018–2.538,Minimum–maximum across participants.
+Wave 2 sampling,"Within-participant median interval, years, median [IQR]",0.121 [0.079–0.372],0.099 [0.077–0.263],1.162 [0.621–1.922],Distribution across participants of each participant's median inter-observation interval.

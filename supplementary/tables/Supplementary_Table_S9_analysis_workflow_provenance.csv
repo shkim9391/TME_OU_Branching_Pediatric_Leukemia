@@ -1,0 +1,10 @@
+Stage,Script,Input,Output,Manuscript
+Annotation harmonization,regenerate_scpcp_common_mapper_v2_4.py,ScPCA .h5ad + metadata,harmonized TME composition,Fig. 2 / SD1–2
+Context robustness,wave1_ecological_context_stability_v2.py,composition + participant table,"k scans, bootstrap, assignments",Fig. 3 / S3–4
+Primary OU models,wave2_fit_full_ablation_models.py,longitudinal transition data,posterior/LOO results,Fig. 4 / S5
+LOPO validation,wave2_true_lopo_validation.py,longitudinal transitions,participant-level predictive results,Fig. 4 / S6
+Secondary endpoints,wave2_fit_secondary_models_v2.py,n and transformed-x endpoints,robustness results,Fig. 5 / S7
+Prior sensitivity,wave3_prior_sensitivity.py,primary transitions,narrow/reference/wide prior fits,"Fig. 5, Supp Fig. S3"
+Recovery,wave3_parameter_recovery.py,simulation design,recovery summaries,Supp Fig. S4 / S8 / SD8
+PPC,wave3_ppc_calibration_audit.py,primary transitions,calibration summaries,Supp Fig. S5 / S8 / SD8
+Figure regeneration,regenerate_revision_figures_waves1_3_v2.py,Waves 1–3 outputs,final figures/source tables,Figs. 2–5; Supp Figs. S1–S6
